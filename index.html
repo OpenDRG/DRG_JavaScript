@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DRG Grouper</title>
+</head>
+<body>
+    DRG分组器
+    <div>
+        病案信息：
+        <input type="text" name="ba" id="ba" size="150"
+            value='22139971,1.0,73.0,27006.0,,13030305.0,8.0,1.0,"G20.x03,R90.803,F41.101,I10.x00x002,N39.000,E77.801,E87.600",,BU21'>
+        <br>
+        分组方案：
+        <select id="groups" name="groups" onchange="load_js(this.options[this.selectedIndex].value)">
+            <option value="chs_drg_11">CHS-DRG 1.1标准分组</option>
+            <option value="suzhou_2022">苏州2022细分组</option>
+            <option value="taizhou_2022">泰州2022细分组</option>
+            <option value="wuxi_2022">无锡2022细分组</option>
+            <option value="wuhan_2022">武汉2022细分组</option>
+            <option value="beijing_2022">北京2022细分组</option>
+        </select>
+        <br>
+        <input type="button" title="submit" name="submit" value="提交" onclick="submit()">
+    </div>
+    <div id="result"></div>
+    <script>
+        function loadjscssfile(filename, filetype) {
+            if (filetype == "js") {
+                var fileref = document.createElement('script');
+                fileref.setAttribute("type", "text/javascript");
+                fileref.setAttribute("src", filename);
+            }
+            else if (filetype == "css") {
+                var fileref = document.createElement("link");
+                fileref.setAttribute("rel", "stylesheet");
+                fileref.setAttribute("type", "text/css");
+                fileref.setAttribute("href", filename);
+            }
+            if (typeof fileref != "undefined")
+                document.getElementsByTagName("head")[0].appendChild(fileref);
+        };
+        function removejscssfile(filename, filetype) {
+            var targetelement = (filetype == "js") ? "script" : (filetype == "css") ? "link" : "none";
+            var targetattr = (filetype == "js") ? "src" : (filetype == "css") ? "href" : "none";
+            var allsuspects = document.getElementsByTagName(targetelement);
+            for (var i = allsuspects.length; i >= 0; i--) {
+                if (allsuspects[i] && allsuspects[i].getAttribute(targetattr) != null && allsuspects[i].getAttribute(targetattr).indexOf(filename) != -1)
+                    allsuspects[i].parentNode.removeChild(allsuspects[i]);
+            }
+        };
+        function createjscssfile(filename, filetype) {
+            if (filetype == "js") {
+                var fileref = document.createElement('script')
+                fileref.setAttribute("type", "text/javascript")
+                fileref.setAttribute("src", filename)
+            }
+            else if (filetype == "css") {
+                var fileref = document.createElement("link")
+                fileref.setAttribute("rel", "stylesheet")
+                fileref.setAttribute("type", "text/css")
+                fileref.setAttribute("href", filename)
+            }
+            return fileref
+        };
+        function replacejscssfile(oldfilename, newfilename, filetype) {
+            var targetelement = (filetype == "js") ? "script" : (filetype == "css") ? "link" : "none";
+            var targetattr = (filetype == "js") ? "src" : (filetype == "css") ? "href" : "none";
+            var allsuspects = document.getElementsByTagName(targetelement);
+            for (var i = allsuspects.length; i >= 0; i--) {
+                if (allsuspects[i] && allsuspects[i].getAttribute(targetattr) != null && allsuspects[i].getAttribute(targetattr).indexOf(oldfilename) != -1) {
+                    var newelement = createjscssfile(newfilename, filetype);
+                    allsuspects[i].parentNode.replaceChild(newelement, allsuspects[i]);
+                }
+            }
+        };
+        var file_added = "";
+        function load_js(name) {
+            var filename='bundle_'+name+'.js';
+            if (file_added){
+                if (file_added!=filename){
+                    replacejscssfile(file_added,filename,'js');
+                    console.log('replace '+file_added+' '+filename);
+                    file_added=filename;
+                }else{
+                    console.log('not load');
+                }
+            }else{
+                loadjscssfile(filename,'js');
+                console.log('load '+filename);
+                file_added=filename;
+            }
+        };
+        function submit() {
+            let text = document.getElementById("ba").value;
+            let result = eval('new GroupProxy_'+document.getElementById("groups").value+'()').group_record_str(text);
+            result.then(x=>{
+                let result=GroupResult.toString(x);
+                document.getElementById("result").innerHTML = result.replace("\n", "<br>");
+            })
+        };
+        load_js(document.getElementById("groups").value);
+    </script>
+</body>
+
+</html>
