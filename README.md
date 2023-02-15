@@ -46,6 +46,7 @@
 打开在项目根目录下的index.html页面进行测试
 
 ### webpack
+修改package.json，删除"type": "module"（如果用rollup打包则需要加上这一项）
 在项目根目录执行npm run webpack或者npx webpack
 打开/dist/index.html页面进行测试
 
