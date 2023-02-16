@@ -1,17 +1,9 @@
-import terser from '@rollup/plugin-terser';
-
 export default [{
-    input: 'drg_group/chs_drg_11/GroupTest.js',
+    input: 'drg_group/yancheng_2022/GroupTest.js',
     output: [{
-        file: 'bundle_chs_drg_11.js',
+        file: 'bundle_yancheng_2022.js',
         format: 'es',
         inlineDynamicImports: true,
-    },
-    {
-        file: 'bundle_chs_drg_11.min.js',
-        format: 'es',
-        inlineDynamicImports: true,
-        plugins: [terser()]
     }]
 },
 {
@@ -20,12 +12,6 @@ export default [{
         file: 'bundle_suzhou_2022.js',
         format: 'es',
         inlineDynamicImports: true,
-    },
-    {
-        file: 'bundle_suzhou_2022.min.js',
-        format: 'es',
-        inlineDynamicImports: true,
-        plugins: [terser()]
     }]
 },
 {
@@ -34,12 +20,6 @@ export default [{
         file: 'bundle_taizhou_2022.js',
         format: 'es',
         inlineDynamicImports: true,
-    },
-    {
-        file: 'bundle_taizhou_2022.min.js',
-        format: 'es',
-        inlineDynamicImports: true,
-        plugins: [terser()]
     }]
 },
 {
@@ -48,12 +28,6 @@ export default [{
         file: 'bundle_wuxi_2022.js',
         format: 'es',
         inlineDynamicImports: true,
-    },
-    {
-        file: 'bundle_wuxi_2022.min.js',
-        format: 'es',
-        inlineDynamicImports: true,
-        plugins: [terser()]
     }]
 },
 {
@@ -62,12 +36,6 @@ export default [{
         file: 'bundle_wuhan_2022.js',
         format: 'es',
         inlineDynamicImports: true,
-    },
-    {
-        file: 'bundle_wuhan_2022.min.js',
-        format: 'es',
-        inlineDynamicImports: true,
-        plugins: [terser()]
     }]
 },
 {
@@ -76,12 +44,6 @@ export default [{
         file: 'bundle_beijing_2022.js',
         format: 'es',
         inlineDynamicImports: true,
-    },
-    {
-        file: 'bundle_beijing_2022.min.js',
-        format: 'es',
-        inlineDynamicImports: true,
-        plugins: [terser()]
     }]
 },
 ];
