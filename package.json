@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "drg_group/chs_drg_11/GroupTest.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "npx rollup --config",
@@ -18,8 +17,10 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
     "rollup": "^3.15.0",
+    "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   }
