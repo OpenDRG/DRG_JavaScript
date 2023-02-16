@@ -43,7 +43,6 @@ async function group(record, type) {
     return result;
 }
 async function get_Payment(type) {
-    // const {DRG} =await import('./drg_group/'+type+'/Base.js');
     const { Payment } = await import('./drg_group/' + type + '/DATA/Payment.js');
     return Payment;
 }
@@ -52,11 +51,9 @@ function click() {
     let Payment = get_Payment(select.value);
     result.then(x => {
         Payment.then(y => {
-            console.log(y);
             div_record.innerHTML = 'record=' + JSON.stringify(x.record);
             let payment=y[x.drg];
             div_drg.innerHTML = x.drg + '-' + payment['DRG名称'];
-            delete payment['DRG名称'];
             buildTable(div_pay,payment);
             buildList(div_msg,x.messages);
             
@@ -76,14 +73,14 @@ function buildTable(div,data) {
     table.appendChild(tbody);
     let tr;
     tr = document.createElement("tr");
-    for (let i of Object.keys(data)) {
+    for (let i of Object.keys(data).slice(1)) {
         let th = document.createElement("th");
         th.innerText = i;
         tr.appendChild(th);
     }
     thead.appendChild(tr);
     tr = document.createElement("tr");
-    for (let i of Object.values(data)) {
+    for (let i of Object.values(data).slice(1)) {
         let td = document.createElement("td");
         td.innerText = i;
         tr.appendChild(td);
