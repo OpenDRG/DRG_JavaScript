@@ -28,11 +28,11 @@ const div_drg = document.createElement('div');
 div_drg.classList.add('red');
 const div_pay = document.createElement('div');
 const div_msg = document.createElement('div');
-div_result.appendChild(div_record);
 div_result.appendChild(document.createElement('br'));
+div_result.appendChild(div_record);
+div_result.appendChild(div_msg);
 div_result.appendChild(div_drg);
 div_result.appendChild(div_pay);
-div_result.appendChild(div_msg);
 div_grouper.appendChild(div_input);
 div_grouper.appendChild(div_result);
 document.body.appendChild(div_grouper);
@@ -52,11 +52,10 @@ function click() {
     result.then(x => {
         Payment.then(y => {
             div_record.innerHTML = 'record=' + JSON.stringify(x.record);
+            buildList(div_msg,x.messages);
             let payment=y[x.drg];
             div_drg.innerHTML = x.drg + '-' + payment['DRG名称'];
-            buildTable(div_pay,payment);
-            buildList(div_msg,x.messages);
-            
+            buildTable(div_pay,payment);   
         })
     });
 }
