@@ -1,4 +1,5 @@
-import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js'
+import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js';
+
 export var MDCM_DRG=class{
 
     MA19_group(record){

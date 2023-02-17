@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCQ_DRG} from '../DRG/MDCQ_DRG.js';
 
 export default function QS2_group(record){

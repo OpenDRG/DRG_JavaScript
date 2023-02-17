@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCW_DRG} from '../DRG/MDCW_DRG.js';
 
 export default function WB1_group(record){

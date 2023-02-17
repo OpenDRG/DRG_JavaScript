@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCY_DRG} from '../DRG/MDCY_DRG.js';
 
 export default function YR2_group(record){

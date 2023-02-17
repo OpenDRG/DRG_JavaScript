@@ -1,4 +1,5 @@
-import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js'
+import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js';
+
 export var MDCE_DRG=class{
 
     EB19_group(record){

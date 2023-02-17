@@ -1,23 +1,8 @@
-import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js'
+import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js';
+
 export var MDCA_DRG=class{
 
-    AG29_group(record){
-        return true;
-    };
-
-    AD19_group(record){
-        return true;
-    };
-
     AA19_group(record){
-        return true;
-    };
-
-    AE19_group(record){
-        return true;
-    };
-
-    AG19_group(record){
         return true;
     };
 
@@ -29,7 +14,23 @@ export var MDCA_DRG=class{
         return true;
     };
 
+    AD19_group(record){
+        return true;
+    };
+
+    AE19_group(record){
+        return true;
+    };
+
     AF19_group(record){
+        return true;
+    };
+
+    AG19_group(record){
+        return true;
+    };
+
+    AG29_group(record){
         return true;
     };
 

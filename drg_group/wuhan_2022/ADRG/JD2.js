@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCJ_DRG} from '../DRG/MDCJ_DRG.js';
 
 export default function JD2_group(record){

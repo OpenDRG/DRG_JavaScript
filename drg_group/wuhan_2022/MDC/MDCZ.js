@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import ZB1_group from '../ADRG/ZB1.js';
 import ZC1_group from '../ADRG/ZC1.js';
 import ZD1_group from '../ADRG/ZD1.js';

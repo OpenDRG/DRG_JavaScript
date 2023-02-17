@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCI_DRG} from '../DRG/MDCI_DRG.js';
 
 export default function IB3_group(record){

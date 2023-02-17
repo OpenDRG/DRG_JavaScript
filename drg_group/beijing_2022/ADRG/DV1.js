@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCD_DRG} from '../DRG/MDCD_DRG.js';
 
 export default function DV1_group(record){

@@ -1,15 +1,8 @@
-import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js'
+import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js';
+
 export var MDCL_DRG=class{
 
     LA19_group(record){
-        return true;
-    };
-
-    LB29_group(record){
-        return true;
-    };
-
-    LB19_group(record){
         return true;
     };
 
@@ -17,11 +10,19 @@ export var MDCL_DRG=class{
         return true;
     };
 
-    LD19_group(record){
+    LB19_group(record){
+        return true;
+    };
+
+    LB29_group(record){
         return true;
     };
 
     LC19_group(record){
+        return true;
+    };
+
+    LD19_group(record){
         return true;
     };
 
@@ -33,15 +34,15 @@ export var MDCL_DRG=class{
         return true;
     };
 
-    LZ11_group(record){
-        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
-    };
-
-    LW11_group(record){
-        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
-    };
-
     LF11_group(record){
+        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    };
+
+    LJ11_group(record){
+        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    };
+
+    LL11_group(record){
         return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
     };
 
@@ -53,15 +54,15 @@ export var MDCL_DRG=class{
         return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
     };
 
+    LT11_group(record){
+        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    };
+
     LU11_group(record){
         return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
     };
 
-    LL11_group(record){
-        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
-    };
-
-    LJ11_group(record){
+    LW11_group(record){
         return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
     };
 
@@ -69,31 +70,11 @@ export var MDCL_DRG=class{
         return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
     };
 
-    LT11_group(record){
+    LZ11_group(record){
         return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
     };
 
-    LZ13_group(record){
-        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
-    };
-
-    LS13_group(record){
-        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
-    };
-
-    LX13_group(record){
-        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
-    };
-
-    LT13_group(record){
-        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
-    };
-
-    LL13_group(record){
-        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
-    };
-
-    LU13_group(record){
+    LF13_group(record){
         return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
@@ -101,7 +82,7 @@ export var MDCL_DRG=class{
         return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
-    LW13_group(record){
+    LL13_group(record){
         return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
@@ -109,39 +90,35 @@ export var MDCL_DRG=class{
         return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
-    LF13_group(record){
+    LS13_group(record){
         return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
-    LZ15_group(record){
-        return true;
+    LT13_group(record){
+        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
-    LU15_group(record){
-        return true;
+    LU13_group(record){
+        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
-    LT15_group(record){
-        return true;
+    LW13_group(record){
+        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
-    LX15_group(record){
-        return true;
+    LX13_group(record){
+        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
-    LS15_group(record){
-        return true;
-    };
-
-    LJ15_group(record){
-        return true;
+    LZ13_group(record){
+        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
     LF15_group(record){
         return true;
     };
 
-    LW15_group(record){
+    LJ15_group(record){
         return true;
     };
 
@@ -150,6 +127,30 @@ export var MDCL_DRG=class{
     };
 
     LR15_group(record){
+        return true;
+    };
+
+    LS15_group(record){
+        return true;
+    };
+
+    LT15_group(record){
+        return true;
+    };
+
+    LU15_group(record){
+        return true;
+    };
+
+    LW15_group(record){
+        return true;
+    };
+
+    LX15_group(record){
+        return true;
+    };
+
+    LZ15_group(record){
         return true;
     };
 

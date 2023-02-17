@@ -1,7 +1,8 @@
-import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js'
+import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js';
+
 export var MDCT_DRG=class{
 
-    TS29_group(record){
+    TR19_group(record){
         return true;
     };
 
@@ -13,15 +14,7 @@ export var MDCT_DRG=class{
         return true;
     };
 
-    TU19_group(record){
-        return true;
-    };
-
-    TT29_group(record){
-        return true;
-    };
-
-    TV19_group(record){
+    TS29_group(record){
         return true;
     };
 
@@ -29,15 +22,23 @@ export var MDCT_DRG=class{
         return true;
     };
 
-    TR19_group(record){
+    TT29_group(record){
         return true;
     };
 
-    TW11_group(record){
-        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    TU19_group(record){
+        return true;
+    };
+
+    TV19_group(record){
+        return true;
     };
 
     TB11_group(record){
+        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    };
+
+    TW11_group(record){
         return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
     };
 
@@ -49,11 +50,11 @@ export var MDCT_DRG=class{
         return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
-    TW15_group(record){
+    TB15_group(record){
         return true;
     };
 
-    TB15_group(record){
+    TW15_group(record){
         return true;
     };
 

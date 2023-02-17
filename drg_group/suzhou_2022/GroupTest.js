@@ -1,5 +1,5 @@
-import {GroupProxy} from './GroupProxy.js'
-import {GroupResult} from './Base.js'
+import {GroupProxy} from './GroupProxy.js';
+import {GroupResult} from './Base.js';
 
 var grouper=new GroupProxy();
 var result=grouper.group_record_str(

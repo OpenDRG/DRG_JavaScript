@@ -2,11 +2,12 @@ import {ZD_INFO} from "./ICD/ZD_INFO.js";
 import {ZD_MAP} from "./ICD/ZD_MAP.js";
 import {SS_INFO} from "./ICD/SS_INFO.js";
 import {SS_MAP} from "./ICD/SS_MAP.js";
+import {DRG} from "./DATA/DRG.js";
 import {SS_VALID} from "./DATA/SS_VALID.js";
 import {CC} from "./DATA/CC.js";
 import {MCC} from "./DATA/MCC.js";
 import {CCE} from "./DATA/CCE.js";
-import {DRG} from "./DATA/DRG.js";
+
 
 var DrgGroupStatus = Object.freeze({
     CHECK_FAILED:'信息校验不通过',
@@ -177,3 +178,4 @@ String.prototype.replaceCsv = function() {
 };
 
 export {MedicalRecord,GroupResult,putMessage,returnMessages,intersect,has_mcc,has_cc,DrgGroupStatus,ZD_INFO,SS_INFO,ZD_MAP,SS_MAP,SS_VALID,DRG};
+//export {MedicalRecord,GroupResult,putMessage,returnMessages,intersect,has_mcc,has_cc,DrgGroupStatus,SS_VALID};

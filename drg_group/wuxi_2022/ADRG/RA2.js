@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCR_DRG} from '../DRG/MDCR_DRG.js';
 
 export default function RA2_group(record){

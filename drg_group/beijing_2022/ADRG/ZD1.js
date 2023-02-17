@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCZ_DRG} from '../DRG/MDCZ_DRG.js';
 
 export default function ZD1_group(record){

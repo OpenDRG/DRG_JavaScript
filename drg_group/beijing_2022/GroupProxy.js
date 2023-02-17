@@ -1,4 +1,6 @@
-import {MedicalRecord,GroupResult,DrgGroupStatus,ZD_INFO,SS_INFO,ZD_MAP,SS_MAP} from './Base.js'
+import {MedicalRecord,GroupResult,DrgGroupStatus,ZD_INFO,SS_INFO,ZD_MAP,SS_MAP} from './Base.js';
+//import {MedicalRecord,GroupResult,DrgGroupStatus} from './Base.js';
+//import Grouper_beijing_2022 from './Grouper_beijing_2022.js';
 
 var GroupProxy_beijing_2022=class{
     checkMessages=[];
@@ -22,6 +24,7 @@ var GroupProxy_beijing_2022=class{
         }
         const {default:group}=await import('./Grouper_beijing_2022.js');
         let result=group(record);
+        //let result=Grouper_beijing_2022(record);
         result.messages=this.returnMessages().concat(result.messages);
         return result;
     }
@@ -96,14 +99,14 @@ var GroupProxy_beijing_2022=class{
         for (let x of record.zdList){
             if (x in ZD_INFO){
                 this.putMessage("{0} {1}".format(x,ZD_INFO[x]));
-            }else{
+            }else if (x){
                 this.putMessage("{0} 未知名称".format(x));
             }
         }
         for (let x of record.ssList){
             if (x in SS_INFO){
                 this.putMessage("{0} {1}".format(x,SS_INFO[x]));
-            }else{
+            }else if (x){
                 this.putMessage("{0} 未知名称".format(x));
             }
         }

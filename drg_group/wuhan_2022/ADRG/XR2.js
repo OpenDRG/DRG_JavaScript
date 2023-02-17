@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCX_DRG} from '../DRG/MDCX_DRG.js';
 
 export default function XR2_group(record){

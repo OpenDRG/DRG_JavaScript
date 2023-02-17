@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCA_DRG} from '../DRG/MDCA_DRG.js';
 
 export default function AC1_group(record){

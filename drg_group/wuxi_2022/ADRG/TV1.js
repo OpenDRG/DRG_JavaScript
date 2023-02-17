@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCT_DRG} from '../DRG/MDCT_DRG.js';
 
 export default function TV1_group(record){

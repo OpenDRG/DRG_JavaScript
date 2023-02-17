@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCG_DRG} from '../DRG/MDCG_DRG.js';
 
 export default function GB2_group(record){

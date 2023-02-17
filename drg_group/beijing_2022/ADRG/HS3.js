@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCH_DRG} from '../DRG/MDCH_DRG.js';
 
 export default function HS3_group(record){

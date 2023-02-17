@@ -1,9 +1,6 @@
-import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js'
-export var MDCZ_DRG=class{
+import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js';
 
-    ZJ19_group(record){
-        return true;
-    };
+export var MDCZ_DRG=class{
 
     ZC19_group(record){
         return true;
@@ -13,11 +10,15 @@ export var MDCZ_DRG=class{
         return true;
     };
 
-    ZZ11_group(record){
-        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    ZJ19_group(record){
+        return true;
     };
 
     ZB11_group(record){
+        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    };
+
+    ZZ11_group(record){
         return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
     };
 

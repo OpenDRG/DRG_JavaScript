@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCP_DRG} from '../DRG/MDCP_DRG.js';
 
 export default function PS2_group(record){

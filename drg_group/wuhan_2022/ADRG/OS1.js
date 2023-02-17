@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCO_DRG} from '../DRG/MDCO_DRG.js';
 
 export default function OS1_group(record){

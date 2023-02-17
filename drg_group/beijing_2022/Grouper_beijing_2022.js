@@ -1,5 +1,5 @@
-import {GroupResult,returnMessages} from './Base.js'
-import {group} from './Grouper.js'
+import {GroupResult,returnMessages} from './Base.js';
+import {group} from './Grouper.js';
 
 export default function Grouper_beijing_2022(record){
     let drgCode=group(record);

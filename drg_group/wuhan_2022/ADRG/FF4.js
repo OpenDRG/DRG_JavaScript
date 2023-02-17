@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCF_DRG} from '../DRG/MDCF_DRG.js';
 
 export default function FF4_group(record){

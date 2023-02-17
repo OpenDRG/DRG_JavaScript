@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCE_DRG} from '../DRG/MDCE_DRG.js';
 
 export default function EX1_group(record){

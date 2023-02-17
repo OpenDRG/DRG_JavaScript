@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCC_DRG} from '../DRG/MDCC_DRG.js';
 
 export default function CB2_group(record){

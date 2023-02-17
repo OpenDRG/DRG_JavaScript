@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCK_DRG} from '../DRG/MDCK_DRG.js';
 
 export default function KC1_group(record){

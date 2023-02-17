@@ -1,4 +1,4 @@
-import {putMessage,intersect,SS_VALID} from '../Base.js'
+import {putMessage,intersect,SS_VALID} from '../Base.js';
 import {MDCU_DRG} from '../DRG/MDCU_DRG.js';
 
 export default function UR1_group(record){

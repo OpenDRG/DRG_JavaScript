@@ -1,7 +1,8 @@
-import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js'
+import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js';
+
 export var MDCM_DRG=class{
 
-    MJ19_group(record){
+    MA19_group(record){
         return true;
     };
 
@@ -13,15 +14,15 @@ export var MDCM_DRG=class{
         return true;
     };
 
-    MS19_group(record){
-        return true;
-    };
-
-    MA19_group(record){
-        return true;
-    };
-
     MD19_group(record){
+        return true;
+    };
+
+    MJ19_group(record){
+        return true;
+    };
+
+    MS19_group(record){
         return true;
     };
 
@@ -33,11 +34,11 @@ export var MDCM_DRG=class{
         return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
     };
 
-    MZ13_group(record){
+    MR13_group(record){
         return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
-    MR13_group(record){
+    MZ13_group(record){
         return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
