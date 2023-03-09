@@ -11,10 +11,11 @@ export default function IT3_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合IT3入组条件，匹配规则：主诊断匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IT39_group(record)){
             return 'IT39';
         }
+
         return 'IT3';
     }else{
         return '';

@@ -11,14 +11,19 @@ export default function FD3_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合FD3入组条件，匹配规则：主手术匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FD31_group(record)){
             return 'FD31';
-        }        if (drg.FD33_group(record)){
+        }
+
+        if (drg.FD33_group(record)){
             return 'FD33';
-        }        if (drg.FD35_group(record)){
+        }
+
+        if (drg.FD35_group(record)){
             return 'FD35';
         }
+
         return 'FD3';
     }else{
         return '';

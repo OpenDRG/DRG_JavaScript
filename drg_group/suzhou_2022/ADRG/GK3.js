@@ -11,12 +11,15 @@ export default function GK3_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合GK3入组条件，匹配规则：主手术匹配');
         let drg=new MDCG_DRG();
-                
+        
         if (drg.GK3A_group(record)){
             return 'GK3A';
-        }        if (drg.GK35_group(record)){
+        }
+
+        if (drg.GK35_group(record)){
             return 'GK35';
         }
+
         return 'GK3';
     }else{
         return '';

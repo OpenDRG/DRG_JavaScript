@@ -11,10 +11,11 @@ export default function FC1_group(record){
     if (true && record.ssList && intersect(record.ssList,adrg_ss) && intersect(record.ssList,adrg_ss1)){
         putMessage('符合FC1入组条件，匹配规则：双手术匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FC19_group(record)){
             return 'FC19';
         }
+
         return 'FC1';
     }else{
         return '';

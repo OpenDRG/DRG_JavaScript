@@ -11,12 +11,15 @@ export default function KD1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合KD1入组条件，匹配规则：主手术匹配');
         let drg=new MDCK_DRG();
-                
+        
         if (drg.KD1A_group(record)){
             return 'KD1A';
-        }        if (drg.KD15_group(record)){
+        }
+
+        if (drg.KD15_group(record)){
             return 'KD15';
         }
+
         return 'KD1';
     }else{
         return '';

@@ -11,10 +11,11 @@ export default function WB1_2_group(record){
     if (true && intersect(record.zdList.slice(1),adrg_zd1) && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合WB1_2入组条件，匹配规则：其他诊断匹配、主手术匹配');
         let drg=new MDCW_DRG();
-                
+        
         if (drg.WB19_group(record)){
             return 'WB19';
         }
+
         return 'WB1';
     }else{
         return '';

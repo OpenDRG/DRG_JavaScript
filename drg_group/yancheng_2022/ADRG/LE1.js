@@ -11,10 +11,11 @@ export default function LE1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合LE1入组条件，匹配规则：主手术匹配');
         let drg=new MDCL_DRG();
-                
+        
         if (drg.LE19_group(record)){
             return 'LE19';
         }
+
         return 'LE1';
     }else{
         return '';

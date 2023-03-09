@@ -11,14 +11,19 @@ export default function QS4_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合QS4入组条件，匹配规则：主诊断匹配');
         let drg=new MDCQ_DRG();
-                
+        
         if (drg.QS41_group(record)){
             return 'QS41';
-        }        if (drg.QS43_group(record)){
+        }
+
+        if (drg.QS43_group(record)){
             return 'QS43';
-        }        if (drg.QS45_group(record)){
+        }
+
+        if (drg.QS45_group(record)){
             return 'QS45';
         }
+
         return 'QS4';
     }else{
         return '';

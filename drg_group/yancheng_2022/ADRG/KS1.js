@@ -11,12 +11,15 @@ export default function KS1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合KS1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCK_DRG();
-                
+        
         if (drg.KS11_group(record)){
             return 'KS11';
-        }        if (drg.KS15_group(record)){
+        }
+
+        if (drg.KS15_group(record)){
             return 'KS15';
         }
+
         return 'KS1';
     }else{
         return '';

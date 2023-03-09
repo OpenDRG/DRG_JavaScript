@@ -11,10 +11,11 @@ export default function IB2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合IB2入组条件，匹配规则：主手术匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IB29_group(record)){
             return 'IB29';
         }
+
         return 'IB2';
     }else{
         return '';

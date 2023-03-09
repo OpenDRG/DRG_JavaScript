@@ -75,5 +75,5 @@ export default function MDCK_group(record){
         return result;
     }
  
-    putMessage('不符合MDCA的ADRG入组条件');
+    putMessage('不符合MDCK的ADRG入组条件');
 }

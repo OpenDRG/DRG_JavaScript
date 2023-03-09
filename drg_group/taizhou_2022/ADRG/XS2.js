@@ -11,14 +11,19 @@ export default function XS2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合XS2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCX_DRG();
-                
+        
         if (drg.XS21_group(record)){
             return 'XS21';
-        }        if (drg.XS23_group(record)){
+        }
+
+        if (drg.XS23_group(record)){
             return 'XS23';
-        }        if (drg.XS25_group(record)){
+        }
+
+        if (drg.XS25_group(record)){
             return 'XS25';
         }
+
         return 'XS2';
     }else{
         return '';

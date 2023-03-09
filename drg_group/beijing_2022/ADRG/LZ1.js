@@ -11,12 +11,15 @@ export default function LZ1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合LZ1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCL_DRG();
-                
+        
         if (drg.LZ13_group(record)){
             return 'LZ13';
-        }        if (drg.LZ15_group(record)){
+        }
+
+        if (drg.LZ15_group(record)){
             return 'LZ15';
         }
+
         return 'LZ1';
     }else{
         return '';

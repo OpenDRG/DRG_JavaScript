@@ -11,14 +11,19 @@ export default function FU2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合FU2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FU21_group(record)){
             return 'FU21';
-        }        if (drg.FU23_group(record)){
+        }
+
+        if (drg.FU23_group(record)){
             return 'FU23';
-        }        if (drg.FU25_group(record)){
+        }
+
+        if (drg.FU25_group(record)){
             return 'FU25';
         }
+
         return 'FU2';
     }else{
         return '';

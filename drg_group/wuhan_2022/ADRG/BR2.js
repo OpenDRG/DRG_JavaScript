@@ -11,14 +11,19 @@ export default function BR2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合BR2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCB_DRG();
-                
+        
         if (drg.BR21_group(record)){
             return 'BR21';
-        }        if (drg.BR23_group(record)){
+        }
+
+        if (drg.BR23_group(record)){
             return 'BR23';
-        }        if (drg.BR25_group(record)){
+        }
+
+        if (drg.BR25_group(record)){
             return 'BR25';
         }
+
         return 'BR2';
     }else{
         return '';

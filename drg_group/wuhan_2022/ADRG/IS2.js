@@ -11,12 +11,15 @@ export default function IS2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合IS2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IS2A_group(record)){
             return 'IS2A';
-        }        if (drg.IS25_group(record)){
+        }
+
+        if (drg.IS25_group(record)){
             return 'IS25';
         }
+
         return 'IS2';
     }else{
         return '';

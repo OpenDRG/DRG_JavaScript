@@ -11,14 +11,19 @@ export default function RW2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合RW2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCR_DRG();
-                
+        
         if (drg.RW21_group(record)){
             return 'RW21';
-        }        if (drg.RW23_group(record)){
+        }
+
+        if (drg.RW23_group(record)){
             return 'RW23';
-        }        if (drg.RW25_group(record)){
+        }
+
+        if (drg.RW25_group(record)){
             return 'RW25';
         }
+
         return 'RW2';
     }else{
         return '';

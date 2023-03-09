@@ -11,12 +11,15 @@ export default function ST1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合ST1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCS_DRG();
-                
+        
         if (drg.ST13_group(record)){
             return 'ST13';
-        }        if (drg.ST15_group(record)){
+        }
+
+        if (drg.ST15_group(record)){
             return 'ST15';
         }
+
         return 'ST1';
     }else{
         return '';

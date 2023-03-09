@@ -11,12 +11,15 @@ export default function JR2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合JR2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCJ_DRG();
-                
+        
         if (drg.JR23_group(record)){
             return 'JR23';
-        }        if (drg.JR25_group(record)){
+        }
+
+        if (drg.JR25_group(record)){
             return 'JR25';
         }
+
         return 'JR2';
     }else{
         return '';

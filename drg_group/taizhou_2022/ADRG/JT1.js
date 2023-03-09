@@ -11,14 +11,19 @@ export default function JT1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合JT1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCJ_DRG();
-                
+        
         if (drg.JT11_group(record)){
             return 'JT11';
-        }        if (drg.JT13_group(record)){
+        }
+
+        if (drg.JT13_group(record)){
             return 'JT13';
-        }        if (drg.JT15_group(record)){
+        }
+
+        if (drg.JT15_group(record)){
             return 'JT15';
         }
+
         return 'JT1';
     }else{
         return '';

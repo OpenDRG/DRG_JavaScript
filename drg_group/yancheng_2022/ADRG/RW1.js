@@ -11,10 +11,11 @@ export default function RW1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合RW1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCR_DRG();
-                
+        
         if (drg.RW19_group(record)){
             return 'RW19';
         }
+
         return 'RW1';
     }else{
         return '';

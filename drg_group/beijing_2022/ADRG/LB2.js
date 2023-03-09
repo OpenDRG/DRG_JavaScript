@@ -11,12 +11,15 @@ export default function LB2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合LB2入组条件，匹配规则：主手术匹配');
         let drg=new MDCL_DRG();
-                
+        
         if (drg.LB21_group(record)){
             return 'LB21';
-        }        if (drg.LB25_group(record)){
+        }
+
+        if (drg.LB25_group(record)){
             return 'LB25';
         }
+
         return 'LB2';
     }else{
         return '';

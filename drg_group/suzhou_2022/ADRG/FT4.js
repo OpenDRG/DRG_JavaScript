@@ -11,12 +11,15 @@ export default function FT4_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合FT4入组条件，匹配规则：主诊断匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FT4A_group(record)){
             return 'FT4A';
-        }        if (drg.FT45_group(record)){
+        }
+
+        if (drg.FT45_group(record)){
             return 'FT45';
         }
+
         return 'FT4';
     }else{
         return '';

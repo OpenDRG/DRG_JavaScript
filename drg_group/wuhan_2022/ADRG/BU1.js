@@ -11,14 +11,19 @@ export default function BU1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合BU1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCB_DRG();
-                
+        
         if (drg.BU11_group(record)){
             return 'BU11';
-        }        if (drg.BU13_group(record)){
+        }
+
+        if (drg.BU13_group(record)){
             return 'BU13';
-        }        if (drg.BU15_group(record)){
+        }
+
+        if (drg.BU15_group(record)){
             return 'BU15';
         }
+
         return 'BU1';
     }else{
         return '';

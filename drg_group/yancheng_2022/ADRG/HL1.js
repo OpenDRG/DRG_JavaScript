@@ -11,12 +11,15 @@ export default function HL1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合HL1入组条件，匹配规则：主手术匹配');
         let drg=new MDCH_DRG();
-                
+        
         if (drg.HL11_group(record)){
             return 'HL11';
-        }        if (drg.HL15_group(record)){
+        }
+
+        if (drg.HL15_group(record)){
             return 'HL15';
         }
+
         return 'HL1';
     }else{
         return '';

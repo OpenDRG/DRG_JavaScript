@@ -11,12 +11,15 @@ export default function JA2_group(record){
     if (true && adrg_zd.includes(record.zdList[0]) && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合JA2入组条件，匹配规则：主诊断匹配、主手术匹配');
         let drg=new MDCJ_DRG();
-                
+        
         if (drg.JA21_group(record)){
             return 'JA21';
-        }        if (drg.JA2B_group(record)){
+        }
+
+        if (drg.JA2B_group(record)){
             return 'JA2B';
         }
+
         return 'JA2';
     }else{
         return '';

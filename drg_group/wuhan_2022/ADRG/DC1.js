@@ -11,10 +11,11 @@ export default function DC1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合DC1入组条件，匹配规则：主手术匹配');
         let drg=new MDCD_DRG();
-                
+        
         if (drg.DC19_group(record)){
             return 'DC19';
         }
+
         return 'DC1';
     }else{
         return '';

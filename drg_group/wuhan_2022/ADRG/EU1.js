@@ -11,14 +11,19 @@ export default function EU1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合EU1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCE_DRG();
-                
+        
         if (drg.EU11_group(record)){
             return 'EU11';
-        }        if (drg.EU13_group(record)){
+        }
+
+        if (drg.EU13_group(record)){
             return 'EU13';
-        }        if (drg.EU15_group(record)){
+        }
+
+        if (drg.EU15_group(record)){
             return 'EU15';
         }
+
         return 'EU1';
     }else{
         return '';

@@ -2,8 +2,8 @@
   "name": "drg_group",
   "version": "1.0.0",
   "description": "",
-  "main": "drg_group/chs_drg_11/GroupTest.js",
-  "type": "module",
+  "main": "index.js",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "npx rollup --config",

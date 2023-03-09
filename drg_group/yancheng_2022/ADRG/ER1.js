@@ -11,12 +11,15 @@ export default function ER1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合ER1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCE_DRG();
-                
+        
         if (drg.ER13_group(record)){
             return 'ER13';
-        }        if (drg.ER15_group(record)){
+        }
+
+        if (drg.ER15_group(record)){
             return 'ER15';
         }
+
         return 'ER1';
     }else{
         return '';

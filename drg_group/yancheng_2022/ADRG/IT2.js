@@ -11,14 +11,19 @@ export default function IT2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合IT2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IT21_group(record)){
             return 'IT21';
-        }        if (drg.IT23_group(record)){
+        }
+
+        if (drg.IT23_group(record)){
             return 'IT23';
-        }        if (drg.IT25_group(record)){
+        }
+
+        if (drg.IT25_group(record)){
             return 'IT25';
         }
+
         return 'IT2';
     }else{
         return '';

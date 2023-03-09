@@ -11,12 +11,15 @@ export default function LV1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合LV1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCL_DRG();
-                
+        
         if (drg.LV11_group(record)){
             return 'LV11';
-        }        if (drg.LV15_group(record)){
+        }
+
+        if (drg.LV15_group(record)){
             return 'LV15';
         }
+
         return 'LV1';
     }else{
         return '';

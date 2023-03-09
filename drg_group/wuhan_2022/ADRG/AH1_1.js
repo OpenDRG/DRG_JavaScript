@@ -11,12 +11,15 @@ export default function AH1_1_group(record){
     if (true && record.ssList && intersect(record.ssList,adrg_ss) && intersect(record.ssList,adrg_ss1)){
         putMessage('符合AH1_1入组条件，匹配规则：双手术匹配');
         let drg=new MDCA_DRG();
-                
+        
         if (drg.AH11_group(record)){
             return 'AH11';
-        }        if (drg.AH1B_group(record)){
+        }
+
+        if (drg.AH1B_group(record)){
             return 'AH1B';
         }
+
         return 'AH1';
     }else{
         return '';

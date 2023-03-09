@@ -11,12 +11,15 @@ export default function HS3_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合HS3入组条件，匹配规则：主诊断匹配');
         let drg=new MDCH_DRG();
-                
+        
         if (drg.HS31_group(record)){
             return 'HS31';
-        }        if (drg.HS3B_group(record)){
+        }
+
+        if (drg.HS3B_group(record)){
             return 'HS3B';
         }
+
         return 'HS3';
     }else{
         return '';

@@ -11,14 +11,19 @@ export default function TS2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合TS2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCT_DRG();
-                
+        
         if (drg.TS21_group(record)){
             return 'TS21';
-        }        if (drg.TS23_group(record)){
+        }
+
+        if (drg.TS23_group(record)){
             return 'TS23';
-        }        if (drg.TS25_group(record)){
+        }
+
+        if (drg.TS25_group(record)){
             return 'TS25';
         }
+
         return 'TS2';
     }else{
         return '';

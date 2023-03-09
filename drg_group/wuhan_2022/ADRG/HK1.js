@@ -11,14 +11,19 @@ export default function HK1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合HK1入组条件，匹配规则：主手术匹配');
         let drg=new MDCH_DRG();
-                
+        
         if (drg.HK11_group(record)){
             return 'HK11';
-        }        if (drg.HK13_group(record)){
+        }
+
+        if (drg.HK13_group(record)){
             return 'HK13';
-        }        if (drg.HK15_group(record)){
+        }
+
+        if (drg.HK15_group(record)){
             return 'HK15';
         }
+
         return 'HK1';
     }else{
         return '';

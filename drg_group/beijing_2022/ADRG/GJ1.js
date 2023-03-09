@@ -11,12 +11,15 @@ export default function GJ1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合GJ1入组条件，匹配规则：主手术匹配');
         let drg=new MDCG_DRG();
-                
+        
         if (drg.GJ13_group(record)){
             return 'GJ13';
-        }        if (drg.GJ15_group(record)){
+        }
+
+        if (drg.GJ15_group(record)){
             return 'GJ15';
         }
+
         return 'GJ1';
     }else{
         return '';

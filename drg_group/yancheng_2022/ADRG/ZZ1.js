@@ -11,12 +11,15 @@ export default function ZZ1_group(record){
     if (true && (!record.ssList || !SS_VALID.includes(record.ssList[0]))){
         putMessage('符合ZZ1入组条件，匹配规则：无手术');
         let drg=new MDCZ_DRG();
-                
+        
         if (drg.ZZ11_group(record)){
             return 'ZZ11';
-        }        if (drg.ZZ15_group(record)){
+        }
+
+        if (drg.ZZ15_group(record)){
             return 'ZZ15';
         }
+
         return 'ZZ1';
     }else{
         return '';

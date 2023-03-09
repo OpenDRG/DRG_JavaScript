@@ -11,12 +11,15 @@ export default function XJ1_group(record){
     if (true && record.ssList && SS_VALID.includes(record.ssList[0])){
         putMessage('符合XJ1入组条件，匹配规则：存在手术');
         let drg=new MDCX_DRG();
-                
+        
         if (drg.XJ11_group(record)){
             return 'XJ11';
-        }        if (drg.XJ1B_group(record)){
+        }
+
+        if (drg.XJ1B_group(record)){
             return 'XJ1B';
         }
+
         return 'XJ1';
     }else{
         return '';

@@ -225,5 +225,5 @@ export default function MDCF_group(record){
         return result;
     }
  
-    putMessage('不符合MDCA的ADRG入组条件');
+    putMessage('不符合MDCF的ADRG入组条件');
 }

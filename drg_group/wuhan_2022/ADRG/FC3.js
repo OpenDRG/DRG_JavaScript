@@ -11,10 +11,11 @@ export default function FC3_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合FC3入组条件，匹配规则：主手术匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FC39_group(record)){
             return 'FC39';
         }
+
         return 'FC3';
     }else{
         return '';

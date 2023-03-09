@@ -11,10 +11,11 @@ export default function GT1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合GT1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCG_DRG();
-                
+        
         if (drg.GT19_group(record)){
             return 'GT19';
         }
+
         return 'GT1';
     }else{
         return '';

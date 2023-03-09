@@ -11,12 +11,15 @@ export default function IC4_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合IC4入组条件，匹配规则：主手术匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IC43_group(record)){
             return 'IC43';
-        }        if (drg.IC45_group(record)){
+        }
+
+        if (drg.IC45_group(record)){
             return 'IC45';
         }
+
         return 'IC4';
     }else{
         return '';

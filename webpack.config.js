@@ -11,6 +11,8 @@ module.exports = {
         wuxi_2022:'./drg_group/wuxi_2022/GroupProxy.js',
         wuhan_2022:'./drg_group/wuhan_2022/GroupProxy.js',
         beijing_2022:'./drg_group/beijing_2022/GroupProxy.js',
+        lanzhou_2022:'./drg_group/lanzhou_2022/GroupProxy.js',
+        fuzhou_2022:'./drg_group/fuzhou_2022/GroupProxy.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

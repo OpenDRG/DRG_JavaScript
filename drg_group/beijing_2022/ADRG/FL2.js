@@ -11,10 +11,11 @@ export default function FL2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合FL2入组条件，匹配规则：主手术匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FL29_group(record)){
             return 'FL29';
         }
+
         return 'FL2';
     }else{
         return '';

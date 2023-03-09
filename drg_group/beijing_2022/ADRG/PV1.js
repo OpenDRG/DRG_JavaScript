@@ -11,10 +11,11 @@ export default function PV1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合PV1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCP_DRG();
-                
+        
         if (drg.PV19_group(record)){
             return 'PV19';
         }
+
         return 'PV1';
     }else{
         return '';

@@ -11,14 +11,19 @@ export default function QR1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合QR1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCQ_DRG();
-                
+        
         if (drg.QR11_group(record)){
             return 'QR11';
-        }        if (drg.QR13_group(record)){
+        }
+
+        if (drg.QR13_group(record)){
             return 'QR13';
-        }        if (drg.QR15_group(record)){
+        }
+
+        if (drg.QR15_group(record)){
             return 'QR15';
         }
+
         return 'QR1';
     }else{
         return '';

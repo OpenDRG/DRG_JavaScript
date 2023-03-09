@@ -11,10 +11,11 @@ export default function JB2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合JB2入组条件，匹配规则：主手术匹配');
         let drg=new MDCJ_DRG();
-                
+        
         if (drg.JB29_group(record)){
             return 'JB29';
         }
+
         return 'JB2';
     }else{
         return '';

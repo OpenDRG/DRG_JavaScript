@@ -11,10 +11,11 @@ export default function VZ1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合VZ1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCV_DRG();
-                
+        
         if (drg.VZ19_group(record)){
             return 'VZ19';
         }
+
         return 'VZ1';
     }else{
         return '';

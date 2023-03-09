@@ -11,14 +11,19 @@ export default function EW1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合EW1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCE_DRG();
-                
+        
         if (drg.EW11_group(record)){
             return 'EW11';
-        }        if (drg.EW13_group(record)){
+        }
+
+        if (drg.EW13_group(record)){
             return 'EW13';
-        }        if (drg.EW15_group(record)){
+        }
+
+        if (drg.EW15_group(record)){
             return 'EW15';
         }
+
         return 'EW1';
     }else{
         return '';

@@ -11,10 +11,11 @@ export default function GE2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合GE2入组条件，匹配规则：主手术匹配');
         let drg=new MDCG_DRG();
-                
+        
         if (drg.GE29_group(record)){
             return 'GE29';
         }
+
         return 'GE2';
     }else{
         return '';

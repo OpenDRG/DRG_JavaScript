@@ -11,12 +11,15 @@ export default function EX2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合EX2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCE_DRG();
-                
+        
         if (drg.EX2A_group(record)){
             return 'EX2A';
-        }        if (drg.EX25_group(record)){
+        }
+
+        if (drg.EX25_group(record)){
             return 'EX25';
         }
+
         return 'EX2';
     }else{
         return '';

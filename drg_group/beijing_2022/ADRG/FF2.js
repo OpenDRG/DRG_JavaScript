@@ -11,10 +11,11 @@ export default function FF2_group(record){
     if (true && record.ssList && intersect(record.ssList,adrg_ss) && intersect(record.ssList,adrg_ss1)){
         putMessage('符合FF2入组条件，匹配规则：双手术匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FF29_group(record)){
             return 'FF29';
         }
+
         return 'FF2';
     }else{
         return '';

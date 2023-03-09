@@ -11,10 +11,11 @@ export default function TR1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合TR1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCT_DRG();
-                
+        
         if (drg.TR19_group(record)){
             return 'TR19';
         }
+
         return 'TR1';
     }else{
         return '';

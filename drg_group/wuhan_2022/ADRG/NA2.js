@@ -11,12 +11,15 @@ export default function NA2_group(record){
     if (true && adrg_zd.includes(record.zdList[0]) && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合NA2入组条件，匹配规则：主诊断匹配、主手术匹配');
         let drg=new MDCN_DRG();
-                
+        
         if (drg.NA2A_group(record)){
             return 'NA2A';
-        }        if (drg.NA25_group(record)){
+        }
+
+        if (drg.NA25_group(record)){
             return 'NA25';
         }
+
         return 'NA2';
     }else{
         return '';

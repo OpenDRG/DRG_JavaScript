@@ -11,12 +11,15 @@ export default function OS1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合OS1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCO_DRG();
-                
+        
         if (drg.OS1A_group(record)){
             return 'OS1A';
-        }        if (drg.OS15_group(record)){
+        }
+
+        if (drg.OS15_group(record)){
             return 'OS15';
         }
+
         return 'OS1';
     }else{
         return '';

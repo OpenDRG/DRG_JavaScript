@@ -11,10 +11,11 @@ export default function LR1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合LR1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCL_DRG();
-                
+        
         if (drg.LR19_group(record)){
             return 'LR19';
         }
+
         return 'LR1';
     }else{
         return '';

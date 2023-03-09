@@ -11,12 +11,15 @@ export default function PS2_group(record){
     if (true && intersect(record.zdList,adrg_zd) && record.weight>0 && record.weight>=1500 && record.weight<2000 && record.ageDay<=28){
         putMessage('符合PS2入组条件，匹配规则：某一诊断匹配、体重1500至2000克、新生儿');
         let drg=new MDCP_DRG();
-                
+        
         if (drg.PS21_group(record)){
             return 'PS21';
-        }        if (drg.PS2B_group(record)){
+        }
+
+        if (drg.PS2B_group(record)){
             return 'PS2B';
         }
+
         return 'PS2';
     }else{
         return '';

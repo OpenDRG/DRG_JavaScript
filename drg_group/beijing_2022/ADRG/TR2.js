@@ -11,12 +11,15 @@ export default function TR2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合TR2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCT_DRG();
-                
+        
         if (drg.TR23_group(record)){
             return 'TR23';
-        }        if (drg.TR25_group(record)){
+        }
+
+        if (drg.TR25_group(record)){
             return 'TR25';
         }
+
         return 'TR2';
     }else{
         return '';

@@ -11,10 +11,11 @@ export default function CW1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合CW1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCC_DRG();
-                
+        
         if (drg.CW19_group(record)){
             return 'CW19';
         }
+
         return 'CW1';
     }else{
         return '';

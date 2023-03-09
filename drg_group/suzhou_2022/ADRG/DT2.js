@@ -11,12 +11,15 @@ export default function DT2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合DT2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCD_DRG();
-                
+        
         if (drg.DT2A_group(record)){
             return 'DT2A';
-        }        if (drg.DT25_group(record)){
+        }
+
+        if (drg.DT25_group(record)){
             return 'DT25';
         }
+
         return 'DT2';
     }else{
         return '';

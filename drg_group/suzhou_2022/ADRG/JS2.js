@@ -11,12 +11,15 @@ export default function JS2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合JS2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCJ_DRG();
-                
+        
         if (drg.JS2A_group(record)){
             return 'JS2A';
-        }        if (drg.JS25_group(record)){
+        }
+
+        if (drg.JS25_group(record)){
             return 'JS25';
         }
+
         return 'JS2';
     }else{
         return '';

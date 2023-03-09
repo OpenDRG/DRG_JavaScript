@@ -11,12 +11,15 @@ export default function PU1_group(record){
     if (true && adrg_zd.includes(record.zdList[0]) && record.ageDay<=28){
         putMessage('符合PU1入组条件，匹配规则：主诊断匹配、新生儿');
         let drg=new MDCP_DRG();
-                
+        
         if (drg.PU13_group(record)){
             return 'PU13';
-        }        if (drg.PU15_group(record)){
+        }
+
+        if (drg.PU15_group(record)){
             return 'PU15';
         }
+
         return 'PU1';
     }else{
         return '';

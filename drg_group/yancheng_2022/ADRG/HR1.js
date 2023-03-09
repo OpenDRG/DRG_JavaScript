@@ -11,10 +11,11 @@ export default function HR1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合HR1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCH_DRG();
-                
+        
         if (drg.HR19_group(record)){
             return 'HR19';
         }
+
         return 'HR1';
     }else{
         return '';

@@ -11,12 +11,15 @@ export default function LC1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合LC1入组条件，匹配规则：主手术匹配');
         let drg=new MDCL_DRG();
-                
+        
         if (drg.LC1A_group(record)){
             return 'LC1A';
-        }        if (drg.LC15_group(record)){
+        }
+
+        if (drg.LC15_group(record)){
             return 'LC15';
         }
+
         return 'LC1';
     }else{
         return '';

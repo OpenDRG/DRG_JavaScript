@@ -11,10 +11,11 @@ export default function CB1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合CB1入组条件，匹配规则：主手术匹配');
         let drg=new MDCC_DRG();
-                
+        
         if (drg.CB19_group(record)){
             return 'CB19';
         }
+
         return 'CB1';
     }else{
         return '';

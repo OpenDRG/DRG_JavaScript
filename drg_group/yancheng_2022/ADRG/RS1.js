@@ -11,14 +11,19 @@ export default function RS1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合RS1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCR_DRG();
-                
+        
         if (drg.RS11_group(record)){
             return 'RS11';
-        }        if (drg.RS13_group(record)){
+        }
+
+        if (drg.RS13_group(record)){
             return 'RS13';
-        }        if (drg.RS15_group(record)){
+        }
+
+        if (drg.RS15_group(record)){
             return 'RS15';
         }
+
         return 'RS1';
     }else{
         return '';

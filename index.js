@@ -48,15 +48,24 @@ async function get_Payment(type) {
 }
 function click() {
     let result = group(input.value, select.value);
-    let Payment = get_Payment(select.value);
+    
+    // result.then(x => {
+    //     Payment.then(y => {
+    //         div_record.innerHTML = 'record=' + JSON.stringify(x.record);
+    //         buildList(div_msg,x.messages);
+    //         let payment=y[x.drg];
+    //         div_drg.innerHTML = x.drg + '-' + payment['DRG名称'];
+    //         buildTable(div_pay,payment);   
+    //     })
+    // });
     result.then(x => {
-        Payment.then(y => {
-            div_record.innerHTML = 'record=' + JSON.stringify(x.record);
-            buildList(div_msg,x.messages);
+        div_record.innerHTML = 'record=' + JSON.stringify(x.record);
+        buildList(div_msg,x.messages);
+        get_Payment(select.value).then(y => {
             let payment=y[x.drg];
             div_drg.innerHTML = x.drg + '-' + payment['DRG名称'];
-            buildTable(div_pay,payment);   
-        })
+            buildTable(div_pay,payment);
+        });
     });
 }
 function buildTable(div,data) {

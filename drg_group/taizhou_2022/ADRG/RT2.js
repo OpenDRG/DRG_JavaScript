@@ -11,14 +11,19 @@ export default function RT2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合RT2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCR_DRG();
-                
+        
         if (drg.RT21_group(record)){
             return 'RT21';
-        }        if (drg.RT23_group(record)){
+        }
+
+        if (drg.RT23_group(record)){
             return 'RT23';
-        }        if (drg.RT25_group(record)){
+        }
+
+        if (drg.RT25_group(record)){
             return 'RT25';
         }
+
         return 'RT2';
     }else{
         return '';

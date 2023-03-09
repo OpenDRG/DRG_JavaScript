@@ -11,12 +11,15 @@ export default function AH1_3_group(record){
     if (true && record.ssList && intersect(record.ssList,adrg_ss)){
         putMessage('符合AH1_3入组条件，匹配规则：某一手术匹配');
         let drg=new MDCA_DRG();
-                
+        
         if (drg.AH11_group(record)){
             return 'AH11';
-        }        if (drg.AH15_group(record)){
+        }
+
+        if (drg.AH15_group(record)){
             return 'AH15';
         }
+
         return 'AH1';
     }else{
         return '';

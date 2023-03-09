@@ -11,10 +11,11 @@ export default function XS1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合XS1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCX_DRG();
-                
+        
         if (drg.XS19_group(record)){
             return 'XS19';
         }
+
         return 'XS1';
     }else{
         return '';

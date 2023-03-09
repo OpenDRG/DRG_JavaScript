@@ -11,10 +11,11 @@ export default function TB1_group(record){
     if (true && record.ssList && SS_VALID.includes(record.ssList[0])){
         putMessage('符合TB1入组条件，匹配规则：存在手术');
         let drg=new MDCT_DRG();
-                
+        
         if (drg.TB19_group(record)){
             return 'TB19';
         }
+
         return 'TB1';
     }else{
         return '';

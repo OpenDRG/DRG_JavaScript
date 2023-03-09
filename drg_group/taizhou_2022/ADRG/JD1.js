@@ -11,14 +11,19 @@ export default function JD1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合JD1入组条件，匹配规则：主手术匹配');
         let drg=new MDCJ_DRG();
-                
+        
         if (drg.JD11_group(record)){
             return 'JD11';
-        }        if (drg.JD13_group(record)){
+        }
+
+        if (drg.JD13_group(record)){
             return 'JD13';
-        }        if (drg.JD15_group(record)){
+        }
+
+        if (drg.JD15_group(record)){
             return 'JD15';
         }
+
         return 'JD1';
     }else{
         return '';

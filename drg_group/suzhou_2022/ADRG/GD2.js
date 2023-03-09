@@ -11,12 +11,15 @@ export default function GD2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合GD2入组条件，匹配规则：主手术匹配');
         let drg=new MDCG_DRG();
-                
+        
         if (drg.GD21_group(record)){
             return 'GD21';
-        }        if (drg.GD2B_group(record)){
+        }
+
+        if (drg.GD2B_group(record)){
             return 'GD2B';
         }
+
         return 'GD2';
     }else{
         return '';

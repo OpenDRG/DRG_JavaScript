@@ -11,14 +11,19 @@ export default function KR1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合KR1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCK_DRG();
-                
+        
         if (drg.KR11_group(record)){
             return 'KR11';
-        }        if (drg.KR13_group(record)){
+        }
+
+        if (drg.KR13_group(record)){
             return 'KR13';
-        }        if (drg.KR15_group(record)){
+        }
+
+        if (drg.KR15_group(record)){
             return 'KR15';
         }
+
         return 'KR1';
     }else{
         return '';

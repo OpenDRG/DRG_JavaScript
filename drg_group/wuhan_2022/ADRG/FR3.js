@@ -11,10 +11,11 @@ export default function FR3_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合FR3入组条件，匹配规则：主诊断匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FR39_group(record)){
             return 'FR39';
         }
+
         return 'FR3';
     }else{
         return '';

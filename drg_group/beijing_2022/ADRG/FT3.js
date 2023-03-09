@@ -11,14 +11,19 @@ export default function FT3_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合FT3入组条件，匹配规则：主诊断匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FT31_group(record)){
             return 'FT31';
-        }        if (drg.FT33_group(record)){
+        }
+
+        if (drg.FT33_group(record)){
             return 'FT33';
-        }        if (drg.FT35_group(record)){
+        }
+
+        if (drg.FT35_group(record)){
             return 'FT35';
         }
+
         return 'FT3';
     }else{
         return '';

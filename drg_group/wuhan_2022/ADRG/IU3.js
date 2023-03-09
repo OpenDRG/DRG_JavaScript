@@ -11,12 +11,15 @@ export default function IU3_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合IU3入组条件，匹配规则：主诊断匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IU31_group(record)){
             return 'IU31';
-        }        if (drg.IU3B_group(record)){
+        }
+
+        if (drg.IU3B_group(record)){
             return 'IU3B';
         }
+
         return 'IU3';
     }else{
         return '';

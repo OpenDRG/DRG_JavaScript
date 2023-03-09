@@ -11,12 +11,15 @@ export default function BT1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合BT1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCB_DRG();
-                
+        
         if (drg.BT1A_group(record)){
             return 'BT1A';
-        }        if (drg.BT15_group(record)){
+        }
+
+        if (drg.BT15_group(record)){
             return 'BT15';
         }
+
         return 'BT1';
     }else{
         return '';

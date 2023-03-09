@@ -11,12 +11,15 @@ export default function PS3_group(record){
     if (true && intersect(record.zdList,adrg_zd) && record.weight>0 && record.weight>=2000 && record.weight<2500 && record.ageDay<=28){
         putMessage('符合PS3入组条件，匹配规则：某一诊断匹配、体重2000至2500克、新生儿');
         let drg=new MDCP_DRG();
-                
+        
         if (drg.PS31_group(record)){
             return 'PS31';
-        }        if (drg.PS3B_group(record)){
+        }
+
+        if (drg.PS3B_group(record)){
             return 'PS3B';
         }
+
         return 'PS3';
     }else{
         return '';

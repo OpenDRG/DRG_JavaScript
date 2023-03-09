@@ -11,12 +11,15 @@ export default function GK2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合GK2入组条件，匹配规则：主手术匹配');
         let drg=new MDCG_DRG();
-                
+        
         if (drg.GK21_group(record)){
             return 'GK21';
-        }        if (drg.GK2B_group(record)){
+        }
+
+        if (drg.GK2B_group(record)){
             return 'GK2B';
         }
+
         return 'GK2';
     }else{
         return '';

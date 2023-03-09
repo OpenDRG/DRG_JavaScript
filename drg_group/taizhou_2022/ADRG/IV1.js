@@ -11,14 +11,19 @@ export default function IV1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合IV1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IV11_group(record)){
             return 'IV11';
-        }        if (drg.IV13_group(record)){
+        }
+
+        if (drg.IV13_group(record)){
             return 'IV13';
-        }        if (drg.IV15_group(record)){
+        }
+
+        if (drg.IV15_group(record)){
             return 'IV15';
         }
+
         return 'IV1';
     }else{
         return '';

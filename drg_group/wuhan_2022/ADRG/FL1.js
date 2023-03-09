@@ -11,10 +11,11 @@ export default function FL1_group(record){
     if (true && adrg_zd.includes(record.zdList[0]) && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合FL1入组条件，匹配规则：主诊断匹配、主手术匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FL19_group(record)){
             return 'FL19';
         }
+
         return 'FL1';
     }else{
         return '';

@@ -11,14 +11,19 @@ export default function IZ2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合IZ2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IZ21_group(record)){
             return 'IZ21';
-        }        if (drg.IZ23_group(record)){
+        }
+
+        if (drg.IZ23_group(record)){
             return 'IZ23';
-        }        if (drg.IZ25_group(record)){
+        }
+
+        if (drg.IZ25_group(record)){
             return 'IZ25';
         }
+
         return 'IZ2';
     }else{
         return '';

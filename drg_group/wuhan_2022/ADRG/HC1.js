@@ -11,12 +11,15 @@ export default function HC1_group(record){
     if (true && record.ssList && intersect(record.ssList,adrg_ss) && intersect(record.ssList,adrg_ss1)){
         putMessage('符合HC1入组条件，匹配规则：双手术匹配');
         let drg=new MDCH_DRG();
-                
+        
         if (drg.HC11_group(record)){
             return 'HC11';
-        }        if (drg.HC1B_group(record)){
+        }
+
+        if (drg.HC1B_group(record)){
             return 'HC1B';
         }
+
         return 'HC1';
     }else{
         return '';

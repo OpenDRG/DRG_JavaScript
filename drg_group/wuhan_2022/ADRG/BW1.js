@@ -11,10 +11,11 @@ export default function BW1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合BW1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCB_DRG();
-                
+        
         if (drg.BW19_group(record)){
             return 'BW19';
         }
+
         return 'BW1';
     }else{
         return '';

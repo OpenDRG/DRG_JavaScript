@@ -11,14 +11,19 @@ export default function OS2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合OS2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCO_DRG();
-                
+        
         if (drg.OS21_group(record)){
             return 'OS21';
-        }        if (drg.OS23_group(record)){
+        }
+
+        if (drg.OS23_group(record)){
             return 'OS23';
-        }        if (drg.OS25_group(record)){
+        }
+
+        if (drg.OS25_group(record)){
             return 'OS25';
         }
+
         return 'OS2';
     }else{
         return '';

@@ -11,10 +11,11 @@ export default function PB1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0]) && record.ageDay<=28){
         putMessage('符合PB1入组条件，匹配规则：主手术匹配、新生儿');
         let drg=new MDCP_DRG();
-                
+        
         if (drg.PB19_group(record)){
             return 'PB19';
         }
+
         return 'PB1';
     }else{
         return '';

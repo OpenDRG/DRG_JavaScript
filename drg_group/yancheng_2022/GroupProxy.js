@@ -1,6 +1,5 @@
 import {MedicalRecord,GroupResult,DrgGroupStatus,ZD_INFO,SS_INFO,ZD_MAP,SS_MAP} from './Base.js';
-//import {MedicalRecord,GroupResult,DrgGroupStatus} from './Base.js';
-//import Grouper_yancheng_2022 from './Grouper_yancheng_2022.js';
+import Grouper_yancheng_2022 from './Grouper_yancheng_2022.js';
 
 var GroupProxy_yancheng_2022=class{
     checkMessages=[];
@@ -22,9 +21,7 @@ var GroupProxy_yancheng_2022=class{
         if (status){
             return GroupResult.createResultCheck(status,this.checkMessages,record);
         }
-        const {default:group}=await import('./Grouper_yancheng_2022.js');
-        let result=group(record);
-        //let result=Grouper_yancheng_2022(record);
+        let result=Grouper_yancheng_2022(record);
         result.messages=this.returnMessages().concat(result.messages);
         return result;
     }

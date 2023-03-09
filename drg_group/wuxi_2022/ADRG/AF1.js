@@ -11,10 +11,11 @@ export default function AF1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合AF1入组条件，匹配规则：主手术匹配');
         let drg=new MDCA_DRG();
-                
+        
         if (drg.AF19_group(record)){
             return 'AF19';
         }
+
         return 'AF1';
     }else{
         return '';

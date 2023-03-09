@@ -11,16 +11,23 @@ export default function RC2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合RC2入组条件，匹配规则：主手术匹配');
         let drg=new MDCR_DRG();
-                
+        
         if (drg.RC22_group(record)){
             return 'RC22';
-        }        if (drg.RC24_group(record)){
+        }
+
+        if (drg.RC24_group(record)){
             return 'RC24';
-        }        if (drg.RC26_group(record)){
+        }
+
+        if (drg.RC26_group(record)){
             return 'RC26';
-        }        if (drg.RC28_group(record)){
+        }
+
+        if (drg.RC28_group(record)){
             return 'RC28';
         }
+
         return 'RC2';
     }else{
         return '';

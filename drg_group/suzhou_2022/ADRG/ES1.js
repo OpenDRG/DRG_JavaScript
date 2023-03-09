@@ -11,10 +11,11 @@ export default function ES1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合ES1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCE_DRG();
-                
+        
         if (drg.ES19_group(record)){
             return 'ES19';
         }
+
         return 'ES1';
     }else{
         return '';

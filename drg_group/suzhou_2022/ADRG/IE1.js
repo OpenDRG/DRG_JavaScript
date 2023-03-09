@@ -11,12 +11,15 @@ export default function IE1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合IE1入组条件，匹配规则：主手术匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IE1A_group(record)){
             return 'IE1A';
-        }        if (drg.IE15_group(record)){
+        }
+
+        if (drg.IE15_group(record)){
             return 'IE15';
         }
+
         return 'IE1';
     }else{
         return '';

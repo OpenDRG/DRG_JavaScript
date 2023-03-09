@@ -11,12 +11,15 @@ export default function NF1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合NF1入组条件，匹配规则：主手术匹配');
         let drg=new MDCN_DRG();
-                
+        
         if (drg.NF1A_group(record)){
             return 'NF1A';
-        }        if (drg.NF15_group(record)){
+        }
+
+        if (drg.NF15_group(record)){
             return 'NF15';
         }
+
         return 'NF1';
     }else{
         return '';

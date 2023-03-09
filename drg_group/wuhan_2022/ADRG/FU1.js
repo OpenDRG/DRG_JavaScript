@@ -11,10 +11,11 @@ export default function FU1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合FU1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FU19_group(record)){
             return 'FU19';
         }
+
         return 'FU1';
     }else{
         return '';

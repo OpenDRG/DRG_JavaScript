@@ -11,10 +11,11 @@ export default function OR1_group(record){
     if (true && intersect(record.zdList.slice(1),adrg_zd1)){
         putMessage('符合OR1入组条件，匹配规则：其他诊断匹配');
         let drg=new MDCO_DRG();
-                
+        
         if (drg.OR19_group(record)){
             return 'OR19';
         }
+
         return 'OR1';
     }else{
         return '';

@@ -11,10 +11,11 @@ export default function JR1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合JR1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCJ_DRG();
-                
+        
         if (drg.JR19_group(record)){
             return 'JR19';
         }
+
         return 'JR1';
     }else{
         return '';

@@ -11,10 +11,11 @@ export default function CV1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合CV1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCC_DRG();
-                
+        
         if (drg.CV19_group(record)){
             return 'CV19';
         }
+
         return 'CV1';
     }else{
         return '';

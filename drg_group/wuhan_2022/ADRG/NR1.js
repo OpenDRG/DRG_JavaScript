@@ -11,12 +11,15 @@ export default function NR1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合NR1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCN_DRG();
-                
+        
         if (drg.NR11_group(record)){
             return 'NR11';
-        }        if (drg.NR1B_group(record)){
+        }
+
+        if (drg.NR1B_group(record)){
             return 'NR1B';
         }
+
         return 'NR1';
     }else{
         return '';

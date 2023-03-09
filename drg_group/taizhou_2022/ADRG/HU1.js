@@ -11,14 +11,19 @@ export default function HU1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合HU1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCH_DRG();
-                
+        
         if (drg.HU11_group(record)){
             return 'HU11';
-        }        if (drg.HU13_group(record)){
+        }
+
+        if (drg.HU13_group(record)){
             return 'HU13';
-        }        if (drg.HU15_group(record)){
+        }
+
+        if (drg.HU15_group(record)){
             return 'HU15';
         }
+
         return 'HU1';
     }else{
         return '';

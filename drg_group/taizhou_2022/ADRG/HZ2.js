@@ -11,14 +11,19 @@ export default function HZ2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合HZ2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCH_DRG();
-                
+        
         if (drg.HZ21_group(record)){
             return 'HZ21';
-        }        if (drg.HZ23_group(record)){
+        }
+
+        if (drg.HZ23_group(record)){
             return 'HZ23';
-        }        if (drg.HZ25_group(record)){
+        }
+
+        if (drg.HZ25_group(record)){
             return 'HZ25';
         }
+
         return 'HZ2';
     }else{
         return '';

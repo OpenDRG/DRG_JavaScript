@@ -11,10 +11,11 @@ export default function LX1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合LX1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCL_DRG();
-                
+        
         if (drg.LX19_group(record)){
             return 'LX19';
         }
+
         return 'LX1';
     }else{
         return '';

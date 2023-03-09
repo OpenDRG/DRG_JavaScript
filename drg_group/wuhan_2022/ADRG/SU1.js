@@ -11,12 +11,15 @@ export default function SU1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合SU1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCS_DRG();
-                
+        
         if (drg.SU1A_group(record)){
             return 'SU1A';
-        }        if (drg.SU15_group(record)){
+        }
+
+        if (drg.SU15_group(record)){
             return 'SU15';
         }
+
         return 'SU1';
     }else{
         return '';

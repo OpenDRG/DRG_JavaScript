@@ -11,10 +11,11 @@ export default function CD1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合CD1入组条件，匹配规则：主手术匹配');
         let drg=new MDCC_DRG();
-                
+        
         if (drg.CD19_group(record)){
             return 'CD19';
         }
+
         return 'CD1';
     }else{
         return '';

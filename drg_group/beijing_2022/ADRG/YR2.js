@@ -11,10 +11,11 @@ export default function YR2_group(record){
     if (true && intersect(record.zdList,adrg_zd)){
         putMessage('符合YR2入组条件，匹配规则：某一诊断匹配');
         let drg=new MDCY_DRG();
-                
+        
         if (drg.YR29_group(record)){
             return 'YR29';
         }
+
         return 'YR2';
     }else{
         return '';

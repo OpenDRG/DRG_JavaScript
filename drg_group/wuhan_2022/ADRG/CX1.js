@@ -11,12 +11,15 @@ export default function CX1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合CX1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCC_DRG();
-                
+        
         if (drg.CX1A_group(record)){
             return 'CX1A';
-        }        if (drg.CX15_group(record)){
+        }
+
+        if (drg.CX15_group(record)){
             return 'CX15';
         }
+
         return 'CX1';
     }else{
         return '';

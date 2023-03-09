@@ -11,12 +11,15 @@ export default function CB2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合CB2入组条件，匹配规则：主手术匹配');
         let drg=new MDCC_DRG();
-                
+        
         if (drg.CB23_group(record)){
             return 'CB23';
-        }        if (drg.CB25_group(record)){
+        }
+
+        if (drg.CB25_group(record)){
             return 'CB25';
         }
+
         return 'CB2';
     }else{
         return '';

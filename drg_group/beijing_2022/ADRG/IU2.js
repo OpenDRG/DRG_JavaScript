@@ -11,12 +11,15 @@ export default function IU2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合IU2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IU23_group(record)){
             return 'IU23';
-        }        if (drg.IU25_group(record)){
+        }
+
+        if (drg.IU25_group(record)){
             return 'IU25';
         }
+
         return 'IU2';
     }else{
         return '';

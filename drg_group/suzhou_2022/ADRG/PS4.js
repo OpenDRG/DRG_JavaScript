@@ -11,12 +11,15 @@ export default function PS4_group(record){
     if (true && intersect(record.zdList,adrg_zd) && record.weight>0 && record.weight>=2500 && record.ageDay<=28){
         putMessage('符合PS4入组条件，匹配规则：某一诊断匹配、体重大于2500克、新生儿');
         let drg=new MDCP_DRG();
-                
+        
         if (drg.PS41_group(record)){
             return 'PS41';
-        }        if (drg.PS4B_group(record)){
+        }
+
+        if (drg.PS4B_group(record)){
             return 'PS4B';
         }
+
         return 'PS4';
     }else{
         return '';

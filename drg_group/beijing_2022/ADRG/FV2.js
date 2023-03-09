@@ -11,14 +11,19 @@ export default function FV2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合FV2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FV21_group(record)){
             return 'FV21';
-        }        if (drg.FV23_group(record)){
+        }
+
+        if (drg.FV23_group(record)){
             return 'FV23';
-        }        if (drg.FV25_group(record)){
+        }
+
+        if (drg.FV25_group(record)){
             return 'FV25';
         }
+
         return 'FV2';
     }else{
         return '';

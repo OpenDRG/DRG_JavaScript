@@ -11,14 +11,19 @@ export default function FT2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合FT2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FT21_group(record)){
             return 'FT21';
-        }        if (drg.FT23_group(record)){
+        }
+
+        if (drg.FT23_group(record)){
             return 'FT23';
-        }        if (drg.FT25_group(record)){
+        }
+
+        if (drg.FT25_group(record)){
             return 'FT25';
         }
+
         return 'FT2';
     }else{
         return '';

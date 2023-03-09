@@ -11,10 +11,11 @@ export default function IR3_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合IR3入组条件，匹配规则：主诊断匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IR39_group(record)){
             return 'IR39';
         }
+
         return 'IR3';
     }else{
         return '';

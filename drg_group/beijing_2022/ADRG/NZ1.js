@@ -11,10 +11,11 @@ export default function NZ1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合NZ1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCN_DRG();
-                
+        
         if (drg.NZ19_group(record)){
             return 'NZ19';
         }
+
         return 'NZ1';
     }else{
         return '';

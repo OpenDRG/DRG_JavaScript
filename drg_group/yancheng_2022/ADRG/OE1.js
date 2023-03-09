@@ -11,10 +11,11 @@ export default function OE1_group(record){
     if (true && adrg_zd.includes(record.zdList[0]) && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合OE1入组条件，匹配规则：主诊断匹配、主手术匹配');
         let drg=new MDCO_DRG();
-                
+        
         if (drg.OE19_group(record)){
             return 'OE19';
         }
+
         return 'OE1';
     }else{
         return '';

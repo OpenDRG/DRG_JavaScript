@@ -11,10 +11,11 @@ export default function LA2_group(record){
     if (true && adrg_zd.includes(record.zdList[0]) && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合LA2入组条件，匹配规则：主诊断匹配、主手术匹配');
         let drg=new MDCL_DRG();
-                
+        
         if (drg.LA29_group(record)){
             return 'LA29';
         }
+
         return 'LA2';
     }else{
         return '';

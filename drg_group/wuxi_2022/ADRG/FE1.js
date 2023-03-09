@@ -11,10 +11,11 @@ export default function FE1_group(record){
     if (true && record.ssList && intersect(record.ssList,adrg_ss) && intersect(record.ssList,adrg_ss1)){
         putMessage('符合FE1入组条件，匹配规则：双手术匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FE19_group(record)){
             return 'FE19';
         }
+
         return 'FE1';
     }else{
         return '';

@@ -11,12 +11,15 @@ export default function BC2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合BC2入组条件，匹配规则：主手术匹配');
         let drg=new MDCB_DRG();
-                
+        
         if (drg.BC2A_group(record)){
             return 'BC2A';
-        }        if (drg.BC25_group(record)){
+        }
+
+        if (drg.BC25_group(record)){
             return 'BC25';
         }
+
         return 'BC2';
     }else{
         return '';

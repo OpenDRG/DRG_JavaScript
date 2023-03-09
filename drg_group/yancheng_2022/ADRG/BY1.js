@@ -11,14 +11,19 @@ export default function BY1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合BY1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCB_DRG();
-                
+        
         if (drg.BY11_group(record)){
             return 'BY11';
-        }        if (drg.BY13_group(record)){
+        }
+
+        if (drg.BY13_group(record)){
             return 'BY13';
-        }        if (drg.BY15_group(record)){
+        }
+
+        if (drg.BY15_group(record)){
             return 'BY15';
         }
+
         return 'BY1';
     }else{
         return '';

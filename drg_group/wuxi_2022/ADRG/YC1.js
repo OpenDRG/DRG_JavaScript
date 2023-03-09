@@ -11,12 +11,15 @@ export default function YC1_group(record){
     if (true && intersect(record.zdList,adrg_zd) && record.ssList && SS_VALID.includes(record.ssList[0])){
         putMessage('符合YC1入组条件，匹配规则：某一诊断匹配、存在手术');
         let drg=new MDCY_DRG();
-                
+        
         if (drg.YC13_group(record)){
             return 'YC13';
-        }        if (drg.YC15_group(record)){
+        }
+
+        if (drg.YC15_group(record)){
             return 'YC15';
         }
+
         return 'YC1';
     }else{
         return '';

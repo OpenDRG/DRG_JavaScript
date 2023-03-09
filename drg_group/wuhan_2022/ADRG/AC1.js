@@ -11,10 +11,11 @@ export default function AC1_group(record){
     if (true && record.ssList && intersect(record.ssList,adrg_ss) && intersect(record.ssList,adrg_ss1)){
         putMessage('符合AC1入组条件，匹配规则：双手术匹配');
         let drg=new MDCA_DRG();
-                
+        
         if (drg.AC19_group(record)){
             return 'AC19';
         }
+
         return 'AC1';
     }else{
         return '';

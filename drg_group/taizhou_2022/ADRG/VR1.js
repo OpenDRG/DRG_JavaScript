@@ -11,14 +11,19 @@ export default function VR1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合VR1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCV_DRG();
-                
+        
         if (drg.VR11_group(record)){
             return 'VR11';
-        }        if (drg.VR13_group(record)){
+        }
+
+        if (drg.VR13_group(record)){
             return 'VR13';
-        }        if (drg.VR15_group(record)){
+        }
+
+        if (drg.VR15_group(record)){
             return 'VR15';
         }
+
         return 'VR1';
     }else{
         return '';

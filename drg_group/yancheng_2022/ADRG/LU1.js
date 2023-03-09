@@ -11,14 +11,19 @@ export default function LU1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合LU1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCL_DRG();
-                
+        
         if (drg.LU11_group(record)){
             return 'LU11';
-        }        if (drg.LU13_group(record)){
+        }
+
+        if (drg.LU13_group(record)){
             return 'LU13';
-        }        if (drg.LU15_group(record)){
+        }
+
+        if (drg.LU15_group(record)){
             return 'LU15';
         }
+
         return 'LU1';
     }else{
         return '';

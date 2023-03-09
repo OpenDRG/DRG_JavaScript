@@ -11,12 +11,15 @@ export default function PC1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0]) && record.ageDay<=28){
         putMessage('符合PC1入组条件，匹配规则：主手术匹配、新生儿');
         let drg=new MDCP_DRG();
-                
+        
         if (drg.PC13_group(record)){
             return 'PC13';
-        }        if (drg.PC15_group(record)){
+        }
+
+        if (drg.PC15_group(record)){
             return 'PC15';
         }
+
         return 'PC1';
     }else{
         return '';

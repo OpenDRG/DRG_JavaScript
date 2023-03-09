@@ -11,10 +11,11 @@ export default function LV1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合LV1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCL_DRG();
-                
+        
         if (drg.LV19_group(record)){
             return 'LV19';
         }
+
         return 'LV1';
     }else{
         return '';

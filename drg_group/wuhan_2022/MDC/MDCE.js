@@ -100,5 +100,5 @@ export default function MDCE_group(record){
         return result;
     }
  
-    putMessage('不符合MDCA的ADRG入组条件');
+    putMessage('不符合MDCE的ADRG入组条件');
 }

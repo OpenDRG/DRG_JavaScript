@@ -11,14 +11,19 @@ export default function ES3_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合ES3入组条件，匹配规则：主诊断匹配');
         let drg=new MDCE_DRG();
-                
+        
         if (drg.ES31_group(record)){
             return 'ES31';
-        }        if (drg.ES33_group(record)){
+        }
+
+        if (drg.ES33_group(record)){
             return 'ES33';
-        }        if (drg.ES35_group(record)){
+        }
+
+        if (drg.ES35_group(record)){
             return 'ES35';
         }
+
         return 'ES3';
     }else{
         return '';

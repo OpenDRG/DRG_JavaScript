@@ -11,12 +11,15 @@ export default function DE1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合DE1入组条件，匹配规则：主手术匹配');
         let drg=new MDCD_DRG();
-                
+        
         if (drg.DE1A_group(record)){
             return 'DE1A';
-        }        if (drg.DE15_group(record)){
+        }
+
+        if (drg.DE15_group(record)){
             return 'DE15';
         }
+
         return 'DE1';
     }else{
         return '';

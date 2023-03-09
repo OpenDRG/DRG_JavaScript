@@ -11,12 +11,15 @@ export default function IR1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合IR1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IR1A_group(record)){
             return 'IR1A';
-        }        if (drg.IR15_group(record)){
+        }
+
+        if (drg.IR15_group(record)){
             return 'IR15';
         }
+
         return 'IR1';
     }else{
         return '';

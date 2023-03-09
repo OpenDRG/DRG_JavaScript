@@ -11,10 +11,11 @@ export default function PR1_group(record){
     if (true && adrg_zd.includes(record.zdList[0]) && record.ageDay<=28){
         putMessage('符合PR1入组条件，匹配规则：主诊断匹配、新生儿');
         let drg=new MDCP_DRG();
-                
+        
         if (drg.PR19_group(record)){
             return 'PR19';
         }
+
         return 'PR1';
     }else{
         return '';

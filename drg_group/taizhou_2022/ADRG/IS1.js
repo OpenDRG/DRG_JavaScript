@@ -11,14 +11,19 @@ export default function IS1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合IS1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IS11_group(record)){
             return 'IS11';
-        }        if (drg.IS13_group(record)){
+        }
+
+        if (drg.IS13_group(record)){
             return 'IS13';
-        }        if (drg.IS15_group(record)){
+        }
+
+        if (drg.IS15_group(record)){
             return 'IS15';
         }
+
         return 'IS1';
     }else{
         return '';

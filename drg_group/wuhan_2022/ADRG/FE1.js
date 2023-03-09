@@ -11,12 +11,15 @@ export default function FE1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合FE1入组条件，匹配规则：主手术匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FE11_group(record)){
             return 'FE11';
-        }        if (drg.FE1B_group(record)){
+        }
+
+        if (drg.FE1B_group(record)){
             return 'FE1B';
         }
+
         return 'FE1';
     }else{
         return '';

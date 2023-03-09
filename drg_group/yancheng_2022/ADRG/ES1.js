@@ -11,12 +11,15 @@ export default function ES1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合ES1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCE_DRG();
-                
+        
         if (drg.ES11_group(record)){
             return 'ES11';
-        }        if (drg.ES15_group(record)){
+        }
+
+        if (drg.ES15_group(record)){
             return 'ES15';
         }
+
         return 'ES1';
     }else{
         return '';

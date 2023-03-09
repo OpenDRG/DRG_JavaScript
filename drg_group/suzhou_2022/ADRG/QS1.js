@@ -11,10 +11,11 @@ export default function QS1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合QS1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCQ_DRG();
-                
+        
         if (drg.QS19_group(record)){
             return 'QS19';
         }
+
         return 'QS1';
     }else{
         return '';

@@ -11,12 +11,15 @@ export default function NJ1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合NJ1入组条件，匹配规则：主手术匹配');
         let drg=new MDCN_DRG();
-                
+        
         if (drg.NJ13_group(record)){
             return 'NJ13';
-        }        if (drg.NJ15_group(record)){
+        }
+
+        if (drg.NJ15_group(record)){
             return 'NJ15';
         }
+
         return 'NJ1';
     }else{
         return '';

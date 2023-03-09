@@ -11,12 +11,15 @@ export default function RC1_group(record){
     if (true && adrg_zd.includes(record.zdList[0]) && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合RC1入组条件，匹配规则：主诊断匹配、主手术匹配');
         let drg=new MDCR_DRG();
-                
+        
         if (drg.RC13_group(record)){
             return 'RC13';
-        }        if (drg.RC15_group(record)){
+        }
+
+        if (drg.RC15_group(record)){
             return 'RC15';
         }
+
         return 'RC1';
     }else{
         return '';

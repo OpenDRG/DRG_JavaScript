@@ -11,10 +11,11 @@ export default function FB2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合FB2入组条件，匹配规则：主手术匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FB29_group(record)){
             return 'FB29';
         }
+
         return 'FB2';
     }else{
         return '';

@@ -11,14 +11,19 @@ export default function HT2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合HT2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCH_DRG();
-                
+        
         if (drg.HT21_group(record)){
             return 'HT21';
-        }        if (drg.HT23_group(record)){
+        }
+
+        if (drg.HT23_group(record)){
             return 'HT23';
-        }        if (drg.HT25_group(record)){
+        }
+
+        if (drg.HT25_group(record)){
             return 'HT25';
         }
+
         return 'HT2';
     }else{
         return '';

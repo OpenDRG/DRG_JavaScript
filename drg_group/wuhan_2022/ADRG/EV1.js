@@ -11,12 +11,15 @@ export default function EV1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合EV1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCE_DRG();
-                
+        
         if (drg.EV1A_group(record)){
             return 'EV1A';
-        }        if (drg.EV15_group(record)){
+        }
+
+        if (drg.EV15_group(record)){
             return 'EV15';
         }
+
         return 'EV1';
     }else{
         return '';

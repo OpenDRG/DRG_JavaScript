@@ -11,14 +11,19 @@ export default function WC1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合WC1入组条件，匹配规则：主手术匹配');
         let drg=new MDCW_DRG();
-                
+        
         if (drg.WC11_group(record)){
             return 'WC11';
-        }        if (drg.WC13_group(record)){
+        }
+
+        if (drg.WC13_group(record)){
             return 'WC13';
-        }        if (drg.WC15_group(record)){
+        }
+
+        if (drg.WC15_group(record)){
             return 'WC15';
         }
+
         return 'WC1';
     }else{
         return '';

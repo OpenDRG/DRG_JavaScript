@@ -11,12 +11,15 @@ export default function BX1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合BX1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCB_DRG();
-                
+        
         if (drg.BX11_group(record)){
             return 'BX11';
-        }        if (drg.BX1B_group(record)){
+        }
+
+        if (drg.BX1B_group(record)){
             return 'BX1B';
         }
+
         return 'BX1';
     }else{
         return '';

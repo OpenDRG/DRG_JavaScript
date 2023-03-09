@@ -11,12 +11,15 @@ export default function IF1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合IF1入组条件，匹配规则：主手术匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IF1A_group(record)){
             return 'IF1A';
-        }        if (drg.IF15_group(record)){
+        }
+
+        if (drg.IF15_group(record)){
             return 'IF15';
         }
+
         return 'IF1';
     }else{
         return '';

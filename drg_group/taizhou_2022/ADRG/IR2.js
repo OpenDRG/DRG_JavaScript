@@ -11,14 +11,19 @@ export default function IR2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合IR2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IR21_group(record)){
             return 'IR21';
-        }        if (drg.IR23_group(record)){
+        }
+
+        if (drg.IR23_group(record)){
             return 'IR23';
-        }        if (drg.IR25_group(record)){
+        }
+
+        if (drg.IR25_group(record)){
             return 'IR25';
         }
+
         return 'IR2';
     }else{
         return '';

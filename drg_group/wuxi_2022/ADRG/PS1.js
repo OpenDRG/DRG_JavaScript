@@ -11,8 +11,7 @@ export default function PS1_group(record){
     if (true && intersect(record.zdList,adrg_zd) && record.weight>0 && record.weight<1500 && record.ageDay<=28){
         putMessage('符合PS1入组条件，匹配规则：某一诊断匹配、体重小于1500克、新生儿');
         let drg=new MDCP_DRG();
-                
-
+        
         return 'PS1';
     }else{
         return '';

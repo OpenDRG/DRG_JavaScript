@@ -11,14 +11,19 @@ export default function OD2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合OD2入组条件，匹配规则：主手术匹配');
         let drg=new MDCO_DRG();
-                
+        
         if (drg.OD21_group(record)){
             return 'OD21';
-        }        if (drg.OD23_group(record)){
+        }
+
+        if (drg.OD23_group(record)){
             return 'OD23';
-        }        if (drg.OD25_group(record)){
+        }
+
+        if (drg.OD25_group(record)){
             return 'OD25';
         }
+
         return 'OD2';
     }else{
         return '';

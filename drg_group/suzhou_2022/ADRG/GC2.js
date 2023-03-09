@@ -11,14 +11,19 @@ export default function GC2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合GC2入组条件，匹配规则：主手术匹配');
         let drg=new MDCG_DRG();
-                
+        
         if (drg.GC21_group(record)){
             return 'GC21';
-        }        if (drg.GC23_group(record)){
+        }
+
+        if (drg.GC23_group(record)){
             return 'GC23';
-        }        if (drg.GC25_group(record)){
+        }
+
+        if (drg.GC25_group(record)){
             return 'GC25';
         }
+
         return 'GC2';
     }else{
         return '';

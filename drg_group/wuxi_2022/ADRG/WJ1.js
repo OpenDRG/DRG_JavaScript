@@ -11,10 +11,11 @@ export default function WJ1_group(record){
     if (true && record.ssList && SS_VALID.includes(record.ssList[0])){
         putMessage('符合WJ1入组条件，匹配规则：存在手术');
         let drg=new MDCW_DRG();
-                
+        
         if (drg.WJ19_group(record)){
             return 'WJ19';
         }
+
         return 'WJ1';
     }else{
         return '';

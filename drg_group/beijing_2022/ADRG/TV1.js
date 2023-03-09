@@ -11,12 +11,15 @@ export default function TV1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合TV1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCT_DRG();
-                
+        
         if (drg.TV13_group(record)){
             return 'TV13';
-        }        if (drg.TV15_group(record)){
+        }
+
+        if (drg.TV15_group(record)){
             return 'TV15';
         }
+
         return 'TV1';
     }else{
         return '';

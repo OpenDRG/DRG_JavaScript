@@ -11,12 +11,15 @@ export default function GU1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合GU1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCG_DRG();
-                
+        
         if (drg.GU13_group(record)){
             return 'GU13';
-        }        if (drg.GU15_group(record)){
+        }
+
+        if (drg.GU15_group(record)){
             return 'GU15';
         }
+
         return 'GU1';
     }else{
         return '';

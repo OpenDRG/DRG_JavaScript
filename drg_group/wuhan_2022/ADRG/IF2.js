@@ -11,10 +11,11 @@ export default function IF2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合IF2入组条件，匹配规则：主手术匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IF29_group(record)){
             return 'IF29';
         }
+
         return 'IF2';
     }else{
         return '';

@@ -11,12 +11,15 @@ export default function VJ1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合VJ1入组条件，匹配规则：主手术匹配');
         let drg=new MDCV_DRG();
-                
+        
         if (drg.VJ13_group(record)){
             return 'VJ13';
-        }        if (drg.VJ15_group(record)){
+        }
+
+        if (drg.VJ15_group(record)){
             return 'VJ15';
         }
+
         return 'VJ1';
     }else{
         return '';

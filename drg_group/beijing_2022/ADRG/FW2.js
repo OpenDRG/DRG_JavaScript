@@ -11,14 +11,19 @@ export default function FW2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合FW2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FW21_group(record)){
             return 'FW21';
-        }        if (drg.FW23_group(record)){
+        }
+
+        if (drg.FW23_group(record)){
             return 'FW23';
-        }        if (drg.FW25_group(record)){
+        }
+
+        if (drg.FW25_group(record)){
             return 'FW25';
         }
+
         return 'FW2';
     }else{
         return '';

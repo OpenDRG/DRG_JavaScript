@@ -11,14 +11,19 @@ export default function BD2_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合BD2入组条件，匹配规则：主手术匹配');
         let drg=new MDCB_DRG();
-                
+        
         if (drg.BD21_group(record)){
             return 'BD21';
-        }        if (drg.BD23_group(record)){
+        }
+
+        if (drg.BD23_group(record)){
             return 'BD23';
-        }        if (drg.BD25_group(record)){
+        }
+
+        if (drg.BD25_group(record)){
             return 'BD25';
         }
+
         return 'BD2';
     }else{
         return '';

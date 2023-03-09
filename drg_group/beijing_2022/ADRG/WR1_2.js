@@ -11,12 +11,15 @@ export default function WR1_2_group(record){
     if (true && intersect(record.zdList.slice(1),adrg_zd1)){
         putMessage('符合WR1_2入组条件，匹配规则：其他诊断匹配');
         let drg=new MDCW_DRG();
-                
+        
         if (drg.WR11_group(record)){
             return 'WR11';
-        }        if (drg.WR15_group(record)){
+        }
+
+        if (drg.WR15_group(record)){
             return 'WR15';
         }
+
         return 'WR1';
     }else{
         return '';

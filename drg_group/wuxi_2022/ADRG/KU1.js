@@ -11,14 +11,19 @@ export default function KU1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合KU1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCK_DRG();
-                
+        
         if (drg.KU11_group(record)){
             return 'KU11';
-        }        if (drg.KU13_group(record)){
+        }
+
+        if (drg.KU13_group(record)){
             return 'KU13';
-        }        if (drg.KU15_group(record)){
+        }
+
+        if (drg.KU15_group(record)){
             return 'KU15';
         }
+
         return 'KU1';
     }else{
         return '';

@@ -11,12 +11,15 @@ export default function NA1_group(record){
     if (true && adrg_zd.includes(record.zdList[0]) && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合NA1入组条件，匹配规则：主诊断匹配、主手术匹配');
         let drg=new MDCN_DRG();
-                
+        
         if (drg.NA11_group(record)){
             return 'NA11';
-        }        if (drg.NA1B_group(record)){
+        }
+
+        if (drg.NA1B_group(record)){
             return 'NA1B';
         }
+
         return 'NA1';
     }else{
         return '';

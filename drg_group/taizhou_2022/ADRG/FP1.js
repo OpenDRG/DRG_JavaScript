@@ -11,14 +11,19 @@ export default function FP1_group(record){
     if (true && adrg_zd.includes(record.zdList[0]) && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合FP1入组条件，匹配规则：主诊断匹配、主手术匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FP11_group(record)){
             return 'FP11';
-        }        if (drg.FP13_group(record)){
+        }
+
+        if (drg.FP13_group(record)){
             return 'FP13';
-        }        if (drg.FP15_group(record)){
+        }
+
+        if (drg.FP15_group(record)){
             return 'FP15';
         }
+
         return 'FP1';
     }else{
         return '';

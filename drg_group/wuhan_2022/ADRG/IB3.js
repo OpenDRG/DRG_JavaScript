@@ -11,14 +11,19 @@ export default function IB3_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合IB3入组条件，匹配规则：主手术匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IB31_group(record)){
             return 'IB31';
-        }        if (drg.IB33_group(record)){
+        }
+
+        if (drg.IB33_group(record)){
             return 'IB33';
-        }        if (drg.IB35_group(record)){
+        }
+
+        if (drg.IB35_group(record)){
             return 'IB35';
         }
+
         return 'IB3';
     }else{
         return '';

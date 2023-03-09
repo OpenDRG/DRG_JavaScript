@@ -11,12 +11,15 @@ export default function CS1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合CS1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCC_DRG();
-                
+        
         if (drg.CS13_group(record)){
             return 'CS13';
-        }        if (drg.CS15_group(record)){
+        }
+
+        if (drg.CS15_group(record)){
             return 'CS15';
         }
+
         return 'CS1';
     }else{
         return '';

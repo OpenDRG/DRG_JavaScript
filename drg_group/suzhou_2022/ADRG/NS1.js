@@ -11,12 +11,15 @@ export default function NS1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合NS1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCN_DRG();
-                
+        
         if (drg.NS1A_group(record)){
             return 'NS1A';
-        }        if (drg.NS15_group(record)){
+        }
+
+        if (drg.NS15_group(record)){
             return 'NS15';
         }
+
         return 'NS1';
     }else{
         return '';

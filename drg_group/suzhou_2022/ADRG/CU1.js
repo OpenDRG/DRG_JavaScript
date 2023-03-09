@@ -11,12 +11,15 @@ export default function CU1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合CU1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCC_DRG();
-                
+        
         if (drg.CU1A_group(record)){
             return 'CU1A';
-        }        if (drg.CU15_group(record)){
+        }
+
+        if (drg.CU15_group(record)){
             return 'CU15';
         }
+
         return 'CU1';
     }else{
         return '';

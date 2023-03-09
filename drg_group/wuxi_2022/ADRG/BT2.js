@@ -11,14 +11,19 @@ export default function BT2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合BT2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCB_DRG();
-                
+        
         if (drg.BT21_group(record)){
             return 'BT21';
-        }        if (drg.BT23_group(record)){
+        }
+
+        if (drg.BT23_group(record)){
             return 'BT23';
-        }        if (drg.BT25_group(record)){
+        }
+
+        if (drg.BT25_group(record)){
             return 'BT25';
         }
+
         return 'BT2';
     }else{
         return '';

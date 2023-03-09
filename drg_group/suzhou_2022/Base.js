@@ -1,13 +1,12 @@
-import {ZD_INFO} from "./ICD/ZD_INFO.js";
-import {ZD_MAP} from "./ICD/ZD_MAP.js";
-import {SS_INFO} from "./ICD/SS_INFO.js";
-import {SS_MAP} from "./ICD/SS_MAP.js";
-import {DRG} from "./DATA/DRG.js";
-import {SS_VALID} from "./DATA/SS_VALID.js";
-import {CC} from "./DATA/CC.js";
-import {MCC} from "./DATA/MCC.js";
-import {CCE} from "./DATA/CCE.js";
-
+import ZD_INFO from "./ICD/ZD_INFO.json" assert { type: 'json' };
+import ZD_MAP from "./ICD/ZD_MAP.json" assert { type: 'json' };
+import SS_INFO from "./ICD/SS_INFO.json" assert { type: 'json' };
+import SS_MAP from "./ICD/SS_MAP.json" assert { type: 'json' };
+import DRG from "./DATA/DRG.json" assert { type: 'json' };
+import SS_VALID from "./DATA/SS_VALID.json" assert { type: 'json' };
+import CC from "./DATA/CC.json" assert { type: 'json' };
+import MCC from "./DATA/MCC.json" assert { type: 'json' };
+import CCE from "./DATA/CCE.json" assert { type: 'json' };
 
 var DrgGroupStatus = Object.freeze({
     CHECK_FAILED:'信息校验不通过',
@@ -109,11 +108,22 @@ function intersect(arr1,arr2){
     }
     return false;
 };
+var mcc_result;
+var cc_result;
+var cce_result;
 function has_mcc(mainZd,otherZd){
-    let cce="";
-    if (CCE.hasOwnProperty(mainZd)){
-        cce=CCE[mainZd];
-        putMessage("主诊断{0}排除表{1}".format(mainZd,cce));
+    if (typeof(mcc_result)!='undefined'){
+        return mcc_result;
+    }
+    if (typeof(cce_result)!='undefined'){
+        var cce=cce_result;
+    }else{
+        var cce="";
+        if (CCE.hasOwnProperty(mainZd)){
+            cce=CCE[mainZd];
+            putMessage("主诊断{0}排除表{1}".format(mainZd,cce));
+            cce_result=cce;
+        }
     }
     for (let zd of otherZd){
         if (MCC.hasOwnProperty(zd)){
@@ -122,6 +132,7 @@ function has_mcc(mainZd,otherZd){
             if (cce && cce==mcc){
                 continue;
             }else{
+                mcc_result=true
                 return true;
             }
         }
@@ -129,10 +140,18 @@ function has_mcc(mainZd,otherZd){
     return false;
 };
 function has_cc(mainZd,otherZd){
-    let cce="";
-    if (CCE.hasOwnProperty(mainZd)){
-        cce=CCE[mainZd];
-        putMessage("主诊断{0}排除表{1}".format(mainZd,cce));
+    if (typeof(cc_result)!='undefined'){
+        return cc_result;
+    }
+    if (typeof(cce_result)!='undefined'){
+        var cce=cce_result;
+    }else{
+        var cce="";
+        if (CCE.hasOwnProperty(mainZd)){
+            cce=CCE[mainZd];
+            putMessage("主诊断{0}排除表{1}".format(mainZd,cce));
+            cce_result=cce;
+        }
     }
     for (let zd of otherZd){
         if (CC.hasOwnProperty(zd)){
@@ -141,6 +160,7 @@ function has_cc(mainZd,otherZd){
             if (cce && cce==cc){
                 continue;
             }else{
+                cc_result=true
                 return true;
             }
         }
@@ -174,8 +194,7 @@ String.prototype.replaceCsv = function() {
     while (match=re.exec(this)){
         target=target.replace(match[0],match[1].replaceAll(",","|"));
     }
-    return target
+    return target;
 };
 
 export {MedicalRecord,GroupResult,putMessage,returnMessages,intersect,has_mcc,has_cc,DrgGroupStatus,ZD_INFO,SS_INFO,ZD_MAP,SS_MAP,SS_VALID,DRG};
-//export {MedicalRecord,GroupResult,putMessage,returnMessages,intersect,has_mcc,has_cc,DrgGroupStatus,SS_VALID};

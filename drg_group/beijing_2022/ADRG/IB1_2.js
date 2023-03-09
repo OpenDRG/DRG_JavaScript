@@ -11,10 +11,11 @@ export default function IB1_2_group(record){
     if (true && adrg_zd.includes(record.zdList[0]) && record.ssList && intersect(record.ssList,adrg_ss)){
         putMessage('符合IB1_2入组条件，匹配规则：主诊断匹配、某一手术匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IB19_group(record)){
             return 'IB19';
         }
+
         return 'IB1';
     }else{
         return '';

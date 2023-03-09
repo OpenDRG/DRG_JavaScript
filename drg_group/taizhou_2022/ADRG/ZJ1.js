@@ -11,10 +11,11 @@ export default function ZJ1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合ZJ1入组条件，匹配规则：主手术匹配');
         let drg=new MDCZ_DRG();
-                
+        
         if (drg.ZJ19_group(record)){
             return 'ZJ19';
         }
+
         return 'ZJ1';
     }else{
         return '';

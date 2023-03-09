@@ -11,12 +11,15 @@ export default function HB1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合HB1入组条件，匹配规则：主手术匹配');
         let drg=new MDCH_DRG();
-                
+        
         if (drg.HB11_group(record)){
             return 'HB11';
-        }        if (drg.HB1B_group(record)){
+        }
+
+        if (drg.HB1B_group(record)){
             return 'HB1B';
         }
+
         return 'HB1';
     }else{
         return '';

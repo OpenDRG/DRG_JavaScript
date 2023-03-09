@@ -11,10 +11,11 @@ export default function EU1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合EU1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCE_DRG();
-                
+        
         if (drg.EU19_group(record)){
             return 'EU19';
         }
+
         return 'EU1';
     }else{
         return '';

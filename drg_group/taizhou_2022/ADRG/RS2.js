@@ -11,14 +11,19 @@ export default function RS2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合RS2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCR_DRG();
-                
+        
         if (drg.RS21_group(record)){
             return 'RS21';
-        }        if (drg.RS23_group(record)){
+        }
+
+        if (drg.RS23_group(record)){
             return 'RS23';
-        }        if (drg.RS25_group(record)){
+        }
+
+        if (drg.RS25_group(record)){
             return 'RS25';
         }
+
         return 'RS2';
     }else{
         return '';

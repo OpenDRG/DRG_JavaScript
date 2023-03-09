@@ -11,14 +11,19 @@ export default function ET1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合ET1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCE_DRG();
-                
+        
         if (drg.ET11_group(record)){
             return 'ET11';
-        }        if (drg.ET13_group(record)){
+        }
+
+        if (drg.ET13_group(record)){
             return 'ET13';
-        }        if (drg.ET15_group(record)){
+        }
+
+        if (drg.ET15_group(record)){
             return 'ET15';
         }
+
         return 'ET1';
     }else{
         return '';

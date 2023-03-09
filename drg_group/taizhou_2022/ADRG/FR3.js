@@ -11,14 +11,19 @@ export default function FR3_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合FR3入组条件，匹配规则：主诊断匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FR31_group(record)){
             return 'FR31';
-        }        if (drg.FR33_group(record)){
+        }
+
+        if (drg.FR33_group(record)){
             return 'FR33';
-        }        if (drg.FR35_group(record)){
+        }
+
+        if (drg.FR35_group(record)){
             return 'FR35';
         }
+
         return 'FR3';
     }else{
         return '';

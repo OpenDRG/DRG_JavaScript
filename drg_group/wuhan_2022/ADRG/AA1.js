@@ -11,10 +11,11 @@ export default function AA1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合AA1入组条件，匹配规则：主手术匹配');
         let drg=new MDCA_DRG();
-                
+        
         if (drg.AA19_group(record)){
             return 'AA19';
         }
+
         return 'AA1';
     }else{
         return '';

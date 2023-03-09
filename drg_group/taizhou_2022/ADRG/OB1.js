@@ -11,10 +11,11 @@ export default function OB1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合OB1入组条件，匹配规则：主手术匹配');
         let drg=new MDCO_DRG();
-                
+        
         if (drg.OB19_group(record)){
             return 'OB19';
         }
+
         return 'OB1';
     }else{
         return '';

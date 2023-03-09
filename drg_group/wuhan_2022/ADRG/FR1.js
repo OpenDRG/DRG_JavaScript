@@ -11,12 +11,15 @@ export default function FR1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合FR1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FR11_group(record)){
             return 'FR11';
-        }        if (drg.FR1B_group(record)){
+        }
+
+        if (drg.FR1B_group(record)){
             return 'FR1B';
         }
+
         return 'FR1';
     }else{
         return '';

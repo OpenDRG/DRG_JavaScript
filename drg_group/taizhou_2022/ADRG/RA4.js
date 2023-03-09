@@ -11,10 +11,11 @@ export default function RA4_group(record){
     if (true && adrg_zd.includes(record.zdList[0]) && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合RA4入组条件，匹配规则：主诊断匹配、主手术匹配');
         let drg=new MDCR_DRG();
-                
+        
         if (drg.RA49_group(record)){
             return 'RA49';
         }
+
         return 'RA4';
     }else{
         return '';

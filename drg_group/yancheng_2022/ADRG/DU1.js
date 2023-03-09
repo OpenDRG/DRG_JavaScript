@@ -11,10 +11,11 @@ export default function DU1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合DU1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCD_DRG();
-                
+        
         if (drg.DU19_group(record)){
             return 'DU19';
         }
+
         return 'DU1';
     }else{
         return '';

@@ -11,14 +11,19 @@ export default function XR3_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合XR3入组条件，匹配规则：主诊断匹配');
         let drg=new MDCX_DRG();
-                
+        
         if (drg.XR31_group(record)){
             return 'XR31';
-        }        if (drg.XR33_group(record)){
+        }
+
+        if (drg.XR33_group(record)){
             return 'XR33';
-        }        if (drg.XR35_group(record)){
+        }
+
+        if (drg.XR35_group(record)){
             return 'XR35';
         }
+
         return 'XR3';
     }else{
         return '';

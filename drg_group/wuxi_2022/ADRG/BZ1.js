@@ -11,14 +11,19 @@ export default function BZ1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合BZ1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCB_DRG();
-                
+        
         if (drg.BZ11_group(record)){
             return 'BZ11';
-        }        if (drg.BZ13_group(record)){
+        }
+
+        if (drg.BZ13_group(record)){
             return 'BZ13';
-        }        if (drg.BZ15_group(record)){
+        }
+
+        if (drg.BZ15_group(record)){
             return 'BZ15';
         }
+
         return 'BZ1';
     }else{
         return '';

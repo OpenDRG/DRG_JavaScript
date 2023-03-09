@@ -11,14 +11,19 @@ export default function SV1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合SV1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCS_DRG();
-                
+        
         if (drg.SV11_group(record)){
             return 'SV11';
-        }        if (drg.SV13_group(record)){
+        }
+
+        if (drg.SV13_group(record)){
             return 'SV13';
-        }        if (drg.SV15_group(record)){
+        }
+
+        if (drg.SV15_group(record)){
             return 'SV15';
         }
+
         return 'SV1';
     }else{
         return '';

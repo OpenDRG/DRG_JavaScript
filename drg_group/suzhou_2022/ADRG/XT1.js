@@ -11,14 +11,19 @@ export default function XT1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合XT1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCX_DRG();
-                
+        
         if (drg.XT11_group(record)){
             return 'XT11';
-        }        if (drg.XT13_group(record)){
+        }
+
+        if (drg.XT13_group(record)){
             return 'XT13';
-        }        if (drg.XT15_group(record)){
+        }
+
+        if (drg.XT15_group(record)){
             return 'XT15';
         }
+
         return 'XT1';
     }else{
         return '';

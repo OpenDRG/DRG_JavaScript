@@ -11,12 +11,15 @@ export default function UR1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合UR1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCU_DRG();
-                
+        
         if (drg.UR11_group(record)){
             return 'UR11';
-        }        if (drg.UR15_group(record)){
+        }
+
+        if (drg.UR15_group(record)){
             return 'UR15';
         }
+
         return 'UR1';
     }else{
         return '';

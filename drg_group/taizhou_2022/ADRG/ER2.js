@@ -11,14 +11,19 @@ export default function ER2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合ER2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCE_DRG();
-                
+        
         if (drg.ER21_group(record)){
             return 'ER21';
-        }        if (drg.ER23_group(record)){
+        }
+
+        if (drg.ER23_group(record)){
             return 'ER23';
-        }        if (drg.ER25_group(record)){
+        }
+
+        if (drg.ER25_group(record)){
             return 'ER25';
         }
+
         return 'ER2';
     }else{
         return '';

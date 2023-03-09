@@ -11,14 +11,19 @@ export default function FV3_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合FV3入组条件，匹配规则：主诊断匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FV31_group(record)){
             return 'FV31';
-        }        if (drg.FV33_group(record)){
+        }
+
+        if (drg.FV33_group(record)){
             return 'FV33';
-        }        if (drg.FV35_group(record)){
+        }
+
+        if (drg.FV35_group(record)){
             return 'FV35';
         }
+
         return 'FV3';
     }else{
         return '';

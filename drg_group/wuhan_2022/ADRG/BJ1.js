@@ -11,12 +11,15 @@ export default function BJ1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合BJ1入组条件，匹配规则：主手术匹配');
         let drg=new MDCB_DRG();
-                
+        
         if (drg.BJ11_group(record)){
             return 'BJ11';
-        }        if (drg.BJ1B_group(record)){
+        }
+
+        if (drg.BJ1B_group(record)){
             return 'BJ1B';
         }
+
         return 'BJ1';
     }else{
         return '';

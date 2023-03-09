@@ -11,10 +11,11 @@ export default function MZ1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合MZ1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCM_DRG();
-                
+        
         if (drg.MZ19_group(record)){
             return 'MZ19';
         }
+
         return 'MZ1';
     }else{
         return '';

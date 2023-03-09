@@ -11,14 +11,19 @@ export default function FT1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合FT1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCF_DRG();
-                
+        
         if (drg.FT11_group(record)){
             return 'FT11';
-        }        if (drg.FT13_group(record)){
+        }
+
+        if (drg.FT13_group(record)){
             return 'FT13';
-        }        if (drg.FT15_group(record)){
+        }
+
+        if (drg.FT15_group(record)){
             return 'FT15';
         }
+
         return 'FT1';
     }else{
         return '';

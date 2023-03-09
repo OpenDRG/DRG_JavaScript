@@ -11,12 +11,15 @@ export default function WR1_1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合WR1_1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCW_DRG();
-                
+        
         if (drg.WR11_group(record)){
             return 'WR11';
-        }        if (drg.WR15_group(record)){
+        }
+
+        if (drg.WR15_group(record)){
             return 'WR15';
         }
+
         return 'WR1';
     }else{
         return '';

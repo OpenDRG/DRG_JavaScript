@@ -11,14 +11,19 @@ export default function IG1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合IG1入组条件，匹配规则：主手术匹配');
         let drg=new MDCI_DRG();
-                
+        
         if (drg.IG11_group(record)){
             return 'IG11';
-        }        if (drg.IG13_group(record)){
+        }
+
+        if (drg.IG13_group(record)){
             return 'IG13';
-        }        if (drg.IG15_group(record)){
+        }
+
+        if (drg.IG15_group(record)){
             return 'IG15';
         }
+
         return 'IG1';
     }else{
         return '';

@@ -11,12 +11,15 @@ export default function WR1_group(record){
     if (true){
         putMessage('符合WR1入组条件，匹配规则：');
         let drg=new MDCW_DRG();
-                
+        
         if (drg.WR11_group(record)){
             return 'WR11';
-        }        if (drg.WR1B_group(record)){
+        }
+
+        if (drg.WR1B_group(record)){
             return 'WR1B';
         }
+
         return 'WR1';
     }else{
         return '';

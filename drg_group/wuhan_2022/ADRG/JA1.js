@@ -11,10 +11,11 @@ export default function JA1_group(record){
     if (true && record.ssList && intersect(record.ssList,adrg_ss) && intersect(record.ssList,adrg_ss1)){
         putMessage('符合JA1入组条件，匹配规则：双手术匹配');
         let drg=new MDCJ_DRG();
-                
+        
         if (drg.JA19_group(record)){
             return 'JA19';
         }
+
         return 'JA1';
     }else{
         return '';

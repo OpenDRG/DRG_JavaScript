@@ -11,12 +11,15 @@ export default function XR2_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合XR2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCX_DRG();
-                
+        
         if (drg.XR2A_group(record)){
             return 'XR2A';
-        }        if (drg.XR25_group(record)){
+        }
+
+        if (drg.XR25_group(record)){
             return 'XR25';
         }
+
         return 'XR2';
     }else{
         return '';

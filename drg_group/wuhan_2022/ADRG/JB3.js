@@ -11,14 +11,19 @@ export default function JB3_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合JB3入组条件，匹配规则：主手术匹配');
         let drg=new MDCJ_DRG();
-                
+        
         if (drg.JB31_group(record)){
             return 'JB31';
-        }        if (drg.JB33_group(record)){
+        }
+
+        if (drg.JB33_group(record)){
             return 'JB33';
-        }        if (drg.JB35_group(record)){
+        }
+
+        if (drg.JB35_group(record)){
             return 'JB35';
         }
+
         return 'JB3';
     }else{
         return '';

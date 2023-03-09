@@ -11,10 +11,11 @@ export default function EC1_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合EC1入组条件，匹配规则：主手术匹配');
         let drg=new MDCE_DRG();
-                
+        
         if (drg.EC19_group(record)){
             return 'EC19';
         }
+
         return 'EC1';
     }else{
         return '';

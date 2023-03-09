@@ -11,12 +11,15 @@ export default function KZ1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合KZ1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCK_DRG();
-                
+        
         if (drg.KZ11_group(record)){
             return 'KZ11';
-        }        if (drg.KZ15_group(record)){
+        }
+
+        if (drg.KZ15_group(record)){
             return 'KZ15';
         }
+
         return 'KZ1';
     }else{
         return '';

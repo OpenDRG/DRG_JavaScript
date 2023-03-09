@@ -11,14 +11,19 @@ export default function BV1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合BV1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCB_DRG();
-                
+        
         if (drg.BV11_group(record)){
             return 'BV11';
-        }        if (drg.BV13_group(record)){
+        }
+
+        if (drg.BV13_group(record)){
             return 'BV13';
-        }        if (drg.BV15_group(record)){
+        }
+
+        if (drg.BV15_group(record)){
             return 'BV15';
         }
+
         return 'BV1';
     }else{
         return '';

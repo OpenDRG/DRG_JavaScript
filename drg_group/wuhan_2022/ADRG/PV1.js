@@ -11,10 +11,11 @@ export default function PV1_group(record){
     if (true){
         putMessage('符合PV1入组条件，匹配规则：');
         let drg=new MDCP_DRG();
-                
+        
         if (drg.PV19_group(record)){
             return 'PV19';
         }
+
         return 'PV1';
     }else{
         return '';

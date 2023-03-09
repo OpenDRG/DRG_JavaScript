@@ -55,5 +55,5 @@ export default function MDCV_group(record){
         return result;
     }
  
-    putMessage('不符合MDCA的ADRG入组条件');
+    putMessage('不符合MDCV的ADRG入组条件');
 }

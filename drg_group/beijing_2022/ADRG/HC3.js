@@ -11,12 +11,15 @@ export default function HC3_group(record){
     if (true && record.ssList && adrg_ss.includes(record.ssList[0])){
         putMessage('符合HC3入组条件，匹配规则：主手术匹配');
         let drg=new MDCH_DRG();
-                
+        
         if (drg.HC33_group(record)){
             return 'HC33';
-        }        if (drg.HC35_group(record)){
+        }
+
+        if (drg.HC35_group(record)){
             return 'HC35';
         }
+
         return 'HC3';
     }else{
         return '';

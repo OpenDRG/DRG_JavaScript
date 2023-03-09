@@ -11,12 +11,15 @@ export default function QT1_group(record){
     if (true && adrg_zd.includes(record.zdList[0])){
         putMessage('符合QT1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCQ_DRG();
-                
+        
         if (drg.QT13_group(record)){
             return 'QT13';
-        }        if (drg.QT15_group(record)){
+        }
+
+        if (drg.QT15_group(record)){
             return 'QT15';
         }
+
         return 'QT1';
     }else{
         return '';
