@@ -1,0 +1,133 @@
+import {putMessage,intersect,has_mcc,has_cc,SS_VALID} from '../Base.js';
+
+export var MDCL_DRG=class{
+
+    LA19_group(record){
+        return true;
+    };
+
+    LB19_group(record){
+        return true;
+    };
+
+    LC19_group(record){
+        return true;
+    };
+
+    LD19_group(record){
+        return true;
+    };
+
+    LE19_group(record){
+        return true;
+    };
+
+    LK19_group(record){
+        return true;
+    };
+
+    LL19_group(record){
+        return true;
+    };
+
+    LS19_group(record){
+        return true;
+    };
+
+    LU19_group(record){
+        return true;
+    };
+
+    LV19_group(record){
+        return true;
+    };
+
+    LY19_group(record){
+        return true;
+    };
+
+    LF11_group(record){
+        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    };
+
+    LJ11_group(record){
+        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    };
+
+    LR11_group(record){
+        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    };
+
+    LT11_group(record){
+        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    };
+
+    LW11_group(record){
+        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    };
+
+    LX11_group(record){
+        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    };
+
+    LZ11_group(record){
+        return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
+    };
+
+    LF13_group(record){
+        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
+    };
+
+    LJ13_group(record){
+        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
+    };
+
+    LR13_group(record){
+        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
+    };
+
+    LT13_group(record){
+        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
+    };
+
+    LW13_group(record){
+        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
+    };
+
+    LX13_group(record){
+        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
+    };
+
+    LZ13_group(record){
+        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
+    };
+
+    LF15_group(record){
+        return true;
+    };
+
+    LJ15_group(record){
+        return true;
+    };
+
+    LR15_group(record){
+        return true;
+    };
+
+    LT15_group(record){
+        return true;
+    };
+
+    LW15_group(record){
+        return true;
+    };
+
+    LX15_group(record){
+        return true;
+    };
+
+    LZ15_group(record){
+        return true;
+    };
+
+}
