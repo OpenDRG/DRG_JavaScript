@@ -17,6 +17,8 @@ select.add(new Option('兰州2022细分组', 'lanzhou_2022'));
 select.add(new Option('福州2022细分组', 'fuzhou_2022'));
 select.add(new Option('ZJ-DRG 1.1浙江2022细分组', 'zhejiang_2022'));
 select.add(new Option('西安2020细分组', 'xian_2020'));
+select.add(new Option('铜川2022细分组', 'tongchuan_2020'));
+select.add(new Option('长株潭衡区域2023细分组', 'changsha_2023'));
 const btn = document.createElement('button');
 btn.innerHTML = '提交';
 btn.onclick = click;
