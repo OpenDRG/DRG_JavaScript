@@ -1,7 +1,7 @@
 import {GroupResult,returnMessages,init_cc_mcc_cce} from './Base.js';
 import {group} from './Grouper.js';
 
-export default function Grouper_xian_2020(record){
+export default function Grouper_chs_drg_10(record){
     init_cc_mcc_cce();
     let drgCode=group(record);
     let result=GroupResult.createResult(record,drgCode);

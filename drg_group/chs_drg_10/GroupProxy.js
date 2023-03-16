@@ -1,7 +1,7 @@
 import {MedicalRecord,GroupResult,DrgGroupStatus,ZD_INFO,SS_INFO,ZD_MAP,SS_MAP} from './Base.js';
-import Grouper_xian_2020 from './Grouper_xian_2020.js';
+import Grouper_chs_drg_10 from './Grouper_chs_drg_10.js';
 
-var GroupProxy_xian_2020=class{
+var GroupProxy_chs_drg_10=class{
     checkMessages=[];
     constructor(TRANS_CODE=false){
         this.TRANS_CODE=TRANS_CODE;
@@ -21,7 +21,7 @@ var GroupProxy_xian_2020=class{
         if (status){
             return GroupResult.createResultCheck(status,this.checkMessages,record);
         }
-        let result=Grouper_xian_2020(record);
+        let result=Grouper_chs_drg_10(record);
         result.messages=this.returnMessages().concat(result.messages);
         return result;
     }
@@ -102,4 +102,4 @@ var GroupProxy_xian_2020=class{
     }
 }
 
-export {GroupProxy_xian_2020 as GroupProxy};
+export {GroupProxy_chs_drg_10 as GroupProxy};

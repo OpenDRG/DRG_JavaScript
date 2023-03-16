@@ -22,7 +22,7 @@ export default function MDCZ_group(record){
             }
         }
         let zd_matched=record.zdList.filter(x=>zd_map.hasOwnProperty(x));
-        let types=record.zdList.filter(x=>zd_map.hasOwnProperty(x)).map(x=>zd_map[x]);
+        let types=Array.from(new Set(record.zdList.filter(x=>zd_map.hasOwnProperty(x)).map(x=>zd_map[x])));
         if (zd_matched){
             putMessage("诊断{0}在MDCZ的主诊表内".format(zd_matched.join(",")));
             putMessage("诊断匹配MDCZ部位：{0}".format(types.join(",")));

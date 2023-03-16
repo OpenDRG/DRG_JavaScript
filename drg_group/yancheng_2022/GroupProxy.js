@@ -75,18 +75,10 @@ var GroupProxy_yancheng_2022=class{
                 this.putMessage("诊断信息为空");
                 return DrgGroupStatus.CHECK_FAILED;
             }
-            if (String(record.gender).indexOf(".")>=0){
-                record.gender=record.gender.substring(0,record.gender.indexOf("."));
-            }else if (record.gender=="男"){
+            if (record.gender=="男"){
                 record.gender="1";
             }else if (record.gender=="女"){
                 record.gender="2";
-            }
-            if (String(record.dept).indexOf(".")>=0){
-                record.dept=record.dept.substring(0,record.dept.indexOf("."));
-            }
-            if (String(record.leavingType).indexOf(".")>=0){
-                record.leavingType=record.leavingType.substring(0,record.leavingType.indexOf("."));
             }
         }catch (error) {
             console.log("{0}:{1}".format(error.name,error.message));

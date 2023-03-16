@@ -1,7 +1,7 @@
 import {MedicalRecord,GroupResult,DrgGroupStatus,ZD_INFO,SS_INFO,ZD_MAP,SS_MAP} from './Base.js';
-import Grouper_tongchuan_2022 from './Grouper_tongchuan_2022.js';
+import Grouper_chs_drg_11 from './Grouper_chs_drg_11.js';
 
-var GroupProxy_tongchuan_2022=class{
+var GroupProxy_chs_drg_11=class{
     checkMessages=[];
     constructor(TRANS_CODE=false){
         this.TRANS_CODE=TRANS_CODE;
@@ -21,7 +21,7 @@ var GroupProxy_tongchuan_2022=class{
         if (status){
             return GroupResult.createResultCheck(status,this.checkMessages,record);
         }
-        let result=Grouper_tongchuan_2022(record);
+        let result=Grouper_chs_drg_11(record);
         result.messages=this.returnMessages().concat(result.messages);
         return result;
     }
@@ -102,4 +102,4 @@ var GroupProxy_tongchuan_2022=class{
     }
 }
 
-export {GroupProxy_tongchuan_2022 as GroupProxy};
+export {GroupProxy_chs_drg_11 as GroupProxy};

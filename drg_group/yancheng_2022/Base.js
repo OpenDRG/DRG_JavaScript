@@ -26,7 +26,7 @@ var DrgGroupStatus = Object.freeze({
 var MedicalRecord={
     createRecord: function(record_str){
         let record = {};
-        let arr=record_str.replaceCsv().split(",")
+        let arr=record_str.replaceCsv().split(",").map(x=>x.substr(x.length-2)=='.0'?x.substr(0,x.length-2):x)
         record.Index = arr[0];
         record.gender = arr[1];
         record.age = arr[2];
@@ -96,7 +96,7 @@ function putMessage(message){
     groupMessages.push(message);
 };
 function returnMessages(){
-    let messages=[...groupMessages];
+    let messages=groupMessages.slice(groupMessages.indexOf('不符合MDCA的ADRG入组条件')+1);
     groupMessages=[];
     return messages;
 };
@@ -111,6 +111,11 @@ function intersect(arr1,arr2){
 var mcc_result;
 var cc_result;
 var cce_result;
+function init_cc_mcc_cce(){
+    mcc_result=undefined;
+    cc_result=undefined;
+    cce_result=undefined;
+}
 function has_mcc(mainZd,otherZd){
     if (typeof(mcc_result)!='undefined'){
         return mcc_result;
@@ -132,7 +137,7 @@ function has_mcc(mainZd,otherZd){
             if (cce && cce==mcc){
                 continue;
             }else{
-                mcc_result=true
+                mcc_result=true;
                 return true;
             }
         }
@@ -160,7 +165,7 @@ function has_cc(mainZd,otherZd){
             if (cce && cce==cc){
                 continue;
             }else{
-                cc_result=true
+                cc_result=true;
                 return true;
             }
         }
@@ -197,4 +202,4 @@ String.prototype.replaceCsv = function() {
     return target;
 };
 
-export {MedicalRecord,GroupResult,putMessage,returnMessages,intersect,has_mcc,has_cc,DrgGroupStatus,ZD_INFO,SS_INFO,ZD_MAP,SS_MAP,SS_VALID,DRG};
+export {MedicalRecord,GroupResult,putMessage,returnMessages,intersect,has_mcc,has_cc,DrgGroupStatus,ZD_INFO,SS_INFO,ZD_MAP,SS_MAP,SS_VALID,DRG,init_cc_mcc_cce};
