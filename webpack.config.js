@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode:'development',
+    devtool: 'inline-source-map',
     entry: {
         index:'./index.js',
         yancheng_2022:'./drg_group/yancheng_2022/GroupProxy.js',
@@ -14,7 +15,8 @@ module.exports = {
         lanzhou_2022:'./drg_group/lanzhou_2022/GroupProxy.js',
         fuzhou_2022:'./drg_group/fuzhou_2022/GroupProxy.js',
         zhejiang_2022:'./drg_group/zhejiang_2022/GroupProxy.js',
-        xian_2022:'./drg_group/xian_2022/GroupProxy.js',
+        chs_drg_10:'./drg_group/chs_drg_10/GroupProxy.js',
+        chs_drg_11:'./drg_group/chs_drg_11/GroupProxy.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

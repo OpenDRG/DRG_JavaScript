@@ -48,58 +48,17 @@ async function group(record, type) {
     let result = grouper.group_record_str(record);
     return result;
 }
-async function get_Payment(type) {
-    const { Payment } = await import('./drg_group/' + type + '/DATA/Payment.js');
-    return Payment;
+async function get_DRG(type) {
+    const DRG = await import('./drg_group/' + type + '/DATA/DRG.json');
+    return DRG;
 }
 function click() {
     let result = group(input.value, select.value);
-    
-    // result.then(x => {
-    //     Payment.then(y => {
-    //         div_record.innerHTML = 'record=' + JSON.stringify(x.record);
-    //         buildList(div_msg,x.messages);
-    //         let payment=y[x.drg];
-    //         div_drg.innerHTML = x.drg + '-' + payment['DRG名称'];
-    //         buildTable(div_pay,payment);   
-    //     })
-    // });
     result.then(x => {
         div_record.innerHTML = 'record=' + JSON.stringify(x.record);
         buildList(div_msg,x.messages);
-        get_Payment(select.value).then(y => {
-            let payment=y[x.drg];
-            div_drg.innerHTML = x.drg + '-' + payment['DRG名称'];
-            buildTable(div_pay,payment);
-        });
+        get_DRG(select.value).then(y =>div_drg.innerHTML = x.drg + '-' + y[x.drg]);
     });
-}
-function buildTable(div,data) {
-    let obj;
-    if(obj=div.firstElementChild){
-        obj.remove();
-    }
-    let table = document.createElement("table");
-    div.appendChild(table);
-    let thead = document.createElement('thead');
-    let tbody = document.createElement('tbody');
-    table.appendChild(thead);
-    table.appendChild(tbody);
-    let tr;
-    tr = document.createElement("tr");
-    for (let i of Object.keys(data).slice(1)) {
-        let th = document.createElement("th");
-        th.innerText = i;
-        tr.appendChild(th);
-    }
-    thead.appendChild(tr);
-    tr = document.createElement("tr");
-    for (let i of Object.values(data).slice(1)) {
-        let td = document.createElement("td");
-        td.innerText = i;
-        tr.appendChild(td);
-    }
-    thead.appendChild(tr);
 }
 function buildList(div,data){
     let obj;

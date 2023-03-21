@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "npx rollup --config",
-    "webpack": "npx webpack"
+    "webpack": "npx webpack",
+    "start": "webpack serve --open"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +22,7 @@
     "rollup": "^3.15.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1"
   }
 }
