@@ -13,17 +13,17 @@ export default [{
         inlineDynamicImports: true,
     }]
 },{
-    input: 'drg_group/yancheng_2022/GroupTest.js',
+    input: 'drg_group/yancheng_2023/GroupTest.js',
     output: [{
-        file: 'bundle_yancheng_2022.js',
+        file: 'bundle_yancheng_2023.js',
         format: 'es',
         inlineDynamicImports: true,
     }]
 },
 {
-    input: 'drg_group/suzhou_2022/GroupTest.js',
+    input: 'drg_group/suzhou_2023/GroupTest.js',
     output: [{
-        file: 'bundle_suzhou_2022.js',
+        file: 'bundle_suzhou_2023.js',
         format: 'es',
         inlineDynamicImports: true,
     }]
@@ -61,9 +61,9 @@ export default [{
     }]
 },
 {
-    input: 'drg_group/lanzhou_2022/GroupTest.js',
+    input: 'drg_group/lanzhou_2023/GroupTest.js',
     output: [{
-        file: 'bundle_lanzhou_2022.js',
+        file: 'bundle_lanzhou_2023.js',
         format: 'es',
         inlineDynamicImports: true,
     }]
@@ -80,6 +80,38 @@ export default [{
     input: 'drg_group/zhejiang_2022/GroupTest.js',
     output: [{
         file: 'bundle_zhejiang_2022.js',
+        format: 'es',
+        inlineDynamicImports: true,
+    }]
+},
+{
+    input: 'drg_group/wlmq_2022/GroupTest.js',
+    output: [{
+        file: 'bundle_wlmq_2022.js',
+        format: 'es',
+        inlineDynamicImports: true,
+    }]
+},
+{
+    input: 'drg_group/changsha_2022/GroupTest.js',
+    output: [{
+        file: 'bundle_changsha_2022.js',
+        format: 'es',
+        inlineDynamicImports: true,
+    }]
+},
+{
+    input: 'drg_group/yantai_2022/GroupTest.js',
+    output: [{
+        file: 'bundle_yantai_2022.js',
+        format: 'es',
+        inlineDynamicImports: true,
+    }]
+},
+{
+    input: 'drg_group/changzhou_2022/GroupTest.js',
+    output: [{
+        file: 'bundle_changzhou_2022.js',
         format: 'es',
         inlineDynamicImports: true,
     }]
