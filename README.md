@@ -14,6 +14,7 @@
 |drg_group/lanzhou_2023|兰州版|
 |drg_group/fuzhou_2022|福州版|
 |drg_group/zhejiang_2022|浙江版|
+|drg_group/wlmq_2022|乌鲁木齐版|
 |drg_group/changsha_2022|长株潭衡区域版|
 |drg_group/yantai_2023|烟台版|
 |drg_group/changzhou_2022|常州版|
