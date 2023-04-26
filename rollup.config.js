@@ -116,4 +116,20 @@ export default [{
         inlineDynamicImports: true,
     }]
 },
+{
+    input: 'drg_group/qingdao_2023/GroupTest.js',
+    output: [{
+        file: 'bundle_qingdao_2023.js',
+        format: 'es',
+        inlineDynamicImports: true,
+    }]
+},
+{
+    input: 'drg_group/linfen_2022/GroupTest.js',
+    output: [{
+        file: 'bundle_linfen_2022.js',
+        format: 'es',
+        inlineDynamicImports: true,
+    }]
+},
 ];

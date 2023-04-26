@@ -20,6 +20,8 @@ module.exports = {
         lanzhou_2023:'./drg_group/lanzhou_2023/GroupProxy.js',
         yantai_2023:'./drg_group/yantai_2023/GroupProxy.js',
         changzhou_2022:'./drg_group/changzhou_2022/GroupProxy.js',
+        qingdao_2023:'./drg_group/qingdao_2023/GroupProxy.js',
+        linfen_2022:'./drg_group/linfen_2022/GroupProxy.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
