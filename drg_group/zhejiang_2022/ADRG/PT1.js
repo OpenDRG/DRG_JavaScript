@@ -6,9 +6,9 @@ export default function PT1_group(record){
     let adrg_zd1=[];
     let adrg_ss=[];
     let adrg_ss1=[];
+    let adrg_ss2=[];
     let dept_list=[];
-    
-    if (true && adrg_zd.includes(record.zdList[0]) && record.weight>0 && record.weight>=1500 && record.weight<2500 && record.ageDay<=28){
+    if (true && adrg_zd.includes(record.zdList[0]) && (!record.ssList || !SS_VALID.includes(record.ssList[0])) && record.weight>0 && record.weight>=1500 && record.weight<2500 && record.ageDay<=28){
         putMessage('符合PT1入组条件，匹配规则：主诊断匹配、体重1500至2500克、新生儿');
         let drg=new MDCP_DRG();
         

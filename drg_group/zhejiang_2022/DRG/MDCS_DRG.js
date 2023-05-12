@@ -6,10 +6,6 @@ export var MDCS_DRG=class{
         return true;
     };
 
-    SR19_group(record){
-        return true;
-    };
-
     SR11_group(record){
         return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
     };

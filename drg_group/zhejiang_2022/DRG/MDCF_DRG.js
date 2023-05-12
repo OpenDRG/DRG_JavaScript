@@ -42,18 +42,6 @@ export var MDCF_DRG=class{
         return true;
     };
 
-    FR19_group(record){
-        return true;
-    };
-
-    FR29_group(record){
-        return true;
-    };
-
-    FU19_group(record){
-        return true;
-    };
-
     FB21_group(record){
         return record.zdList.length>1 && has_mcc(record.zdList[0],record.zdList.slice(1));
     };
@@ -270,10 +258,6 @@ export var MDCF_DRG=class{
         return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
 
-    FT23_group(record){
-        return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
-    };
-
     FT33_group(record){
         return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
     };
@@ -312,6 +296,10 @@ export var MDCF_DRG=class{
 
     FZ13_group(record){
         return record.zdList.length>1 && (has_mcc(record.zdList[0],record.zdList.slice(1)) || has_cc(record.zdList[0],record.zdList.slice(1)));
+    };
+
+    FT2B_group(record){
+        return true;
     };
 
     FB25_group(record){

@@ -6,10 +6,10 @@ export default function YC1_group(record){
     let adrg_zd1=[];
     let adrg_ss=[];
     let adrg_ss1=[];
+    let adrg_ss2=[];
     let dept_list=[];
-    
-    if (true){
-        putMessage('符合YC1入组条件，匹配规则：');
+    if (true && record.ssList && SS_VALID.includes(record.ssList[0])){
+        putMessage('符合YC1入组条件，匹配规则：存在手术');
         let drg=new MDCY_DRG();
         
         if (drg.YC19_group(record)){

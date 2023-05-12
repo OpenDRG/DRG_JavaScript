@@ -18,14 +18,6 @@ export var MDCB_DRG=class{
         return true;
     };
 
-    BR19_group(record){
-        return true;
-    };
-
-    BR29_group(record){
-        return true;
-    };
-
     BS19_group(record){
         return true;
     };

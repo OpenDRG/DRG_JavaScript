@@ -6,10 +6,10 @@ export default function TB1_group(record){
     let adrg_zd1=[];
     let adrg_ss=[];
     let adrg_ss1=[];
+    let adrg_ss2=[];
     let dept_list=[];
-    
-    if (true){
-        putMessage('符合TB1入组条件，匹配规则：');
+    if (true && record.ssList && SS_VALID.includes(record.ssList[0])){
+        putMessage('符合TB1入组条件，匹配规则：存在手术');
         let drg=new MDCT_DRG();
         
         if (drg.TB19_group(record)){

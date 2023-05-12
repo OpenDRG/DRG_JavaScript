@@ -6,10 +6,6 @@ export var MDCV_DRG=class{
         return true;
     };
 
-    VS29_group(record){
-        return true;
-    };
-
     VT19_group(record){
         return true;
     };

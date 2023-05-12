@@ -6,9 +6,9 @@ export default function LV1_group(record){
     let adrg_zd1=[];
     let adrg_ss=[];
     let adrg_ss1=[];
+    let adrg_ss2=[];
     let dept_list=[];
-    
-    if (true && adrg_zd.includes(record.zdList[0])){
+    if (true && adrg_zd.includes(record.zdList[0]) && (!record.ssList || !SS_VALID.includes(record.ssList[0]))){
         putMessage('符合LV1入组条件，匹配规则：主诊断匹配');
         let drg=new MDCL_DRG();
         
@@ -16,7 +16,7 @@ export default function LV1_group(record){
             return 'LV11';
         }
 
-        if (drg.LV13_group(record)){
+        if (drg.LV1B_group(record)){
             return 'LV13';
         }
 

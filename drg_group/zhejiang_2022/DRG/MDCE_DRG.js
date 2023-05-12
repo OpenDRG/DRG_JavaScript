@@ -14,10 +14,6 @@ export var MDCE_DRG=class{
         return true;
     };
 
-    ES29_group(record){
-        return true;
-    };
-
     EV19_group(record){
         return true;
     };

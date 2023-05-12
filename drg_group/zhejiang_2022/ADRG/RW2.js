@@ -6,9 +6,9 @@ export default function RW2_group(record){
     let adrg_zd1=[];
     let adrg_ss=[];
     let adrg_ss1=[];
+    let adrg_ss2=[];
     let dept_list=[];
-    
-    if (true && adrg_zd.includes(record.zdList[0])){
+    if (true && adrg_zd.includes(record.zdList[0]) && (!record.ssList || !SS_VALID.includes(record.ssList[0]))){
         putMessage('符合RW2入组条件，匹配规则：主诊断匹配');
         let drg=new MDCR_DRG();
         
