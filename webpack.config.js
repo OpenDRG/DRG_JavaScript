@@ -22,10 +22,11 @@ module.exports = {
         changzhou_2022:'./drg_group/changzhou_2022/GroupProxy.js',
         qingdao_2023:'./drg_group/qingdao_2023/GroupProxy.js',
         linfen_2022:'./drg_group/linfen_2022/GroupProxy.js',
+        index:'./index.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].bundle.js',
+        filename: '[name].js',
         clean: true,
     },
     module: {
