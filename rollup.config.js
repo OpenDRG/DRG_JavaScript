@@ -93,17 +93,17 @@ export default [{
     }]
 },
 {
-    input: 'drg_group/changsha_2022/GroupTest.js',
+    input: 'drg_group/changsha_2023/GroupTest.js',
     output: [{
-        file: 'bundle_changsha_2022.js',
+        file: 'bundle_changsha_2023.js',
         format: 'es',
         inlineDynamicImports: true,
     }]
 },
 {
-    input: 'drg_group/yantai_2022/GroupTest.js',
+    input: 'drg_group/yantai_2023/GroupTest.js',
     output: [{
-        file: 'bundle_yantai_2022.js',
+        file: 'bundle_yantai_2023.js',
         format: 'es',
         inlineDynamicImports: true,
     }]

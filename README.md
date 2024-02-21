@@ -37,8 +37,24 @@
 在项目根目录执行npm install，系统会自动安装打包工具rollup、webpack
 
 ### rollup
-在项目根目录执行npm run rollup或者npx rollup --config
-打开在项目根目录下的index.html页面进行测试
+1. `rollup`打包方式需要先执行`npm install @rollup/plugin-json --save-dev`
+2. 在`rollup.config.js`中加入`import json from '@rollup/plugin-json'`
+3. 在`rollup.config.js`导入插件，如下：
+   ```js
+   export default [{
+    //input...,
+    //output...,
+    plugins: [json()]
+    },{
+    //input...,
+    //output...,
+    plugins: [json()]
+    },
+    //...
+    ]
+   ```
+4. 在项目根目录执行npm run rollup或者npx rollup --config
+5. 打开在项目根目录下的index.html页面进行测试
 
 ### webpack
 修改package.json，删除"type": "module"（如果用rollup打包则需要加上这一项）
